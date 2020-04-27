@@ -151,6 +151,10 @@ class Home extends React.Component {
             <ProductCard className="m-2" />
             <ProductCard className="m-2" />
             <ProductCard className="m-2" />
+<<<<<<< HEAD
+=======
+            <ProductCard className="m-2" />
+>>>>>>> b3d57fa4d4c7075e9d991868afaa7eaced7bd92e
           </div>
         </div>
         {/* ABOUT SECTION */}
