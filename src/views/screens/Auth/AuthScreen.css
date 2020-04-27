@@ -1,0 +1,29 @@
+.custom-btn-auth-outlined {
+  border: 1px solid #E2E5E6;
+  color: #373F41;
+}
+
+.custom-btn-auth-outlined:hover {
+  border: 1px solid #373F41;
+  color: #FFFFFF;
+}
+
+.custom-btn-auth-outlined:active {
+  border: 1px solid #E2E5E6;
+  color: #373F41;
+}
+
+
+.custom-btn-auth {
+  padding: 12px 18px;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Muli;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  width: fit-content;
+  transition: all ease-in-out 100ms;
+}

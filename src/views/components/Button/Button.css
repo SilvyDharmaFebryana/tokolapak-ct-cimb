@@ -67,3 +67,20 @@
 .custom-btn-textual:active {
   color: var(--accent-dark);
 }
+
+.custom-btn-auth {
+  border: 1px solid #E2E5E6;
+  color: #373F41;
+}
+
+.custom-btn-auth:hover {
+  border: 1px solid #373F41;
+  background-color: #373F41;
+  color: #FFFFFF;
+}
+
+.custom-btn-auth:active {
+  border: 1px solid #E2E5E6;
+  color: #373F41;
+}
+
