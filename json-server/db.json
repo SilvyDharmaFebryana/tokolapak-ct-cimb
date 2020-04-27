@@ -1,3 +1,18 @@
 {
-    "users": []
+  "users": [
+    {
+      "username": "silvy",
+      "password": "suju",
+      "address": "bekasi",
+      "repPassword": "suju",
+      "id": 1
+    },
+    {
+      "username": "lala",
+      "password": "lala",
+      "address": "lala",
+      "repPassword": "lala",
+      "id": 2
+    }
+  ]
 }
