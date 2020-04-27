@@ -1,18 +1,11 @@
 {
   "users": [
     {
-      "username": "silvy",
-      "password": "suju",
-      "address": "bekasi",
-      "repPassword": "suju",
+      "username": "silvy16",
+      "password": "123",
+      "repPassword": "123",
+      "fullName": "silvy dharma febryana",
       "id": 1
-    },
-    {
-      "username": "lala",
-      "password": "lala",
-      "address": "lala",
-      "repPassword": "lala",
-      "id": 2
     }
   ]
 }

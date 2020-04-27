@@ -10,6 +10,7 @@ class AuthScreen extends React.Component {
     isCondition: true,
     username: "",
     password: "",
+    fullName: "",
     address: "",
     repPassword: "",
     user: [],
@@ -32,12 +33,13 @@ class AuthScreen extends React.Component {
 
   registerPostDataHandler = () => {
 
-    const { username, password, repPassword, address } = this.state;
+    const { username, password, repPassword, address, fullName } = this.state;
 
     const userData = {
       username,
       password,
       address,
+      fullName,
       repPassword,
     }
     this.props.onRegis(userData)
@@ -99,8 +101,9 @@ class AuthScreen extends React.Component {
                     <p className="mt-4">
                       You will get the best recommendation for rent house in near of you
                     </p>
-                    <TextField placeholder="Username" className="mt-5" onChange={(e) => this.inputHandler(e, "username")}/>
-                    <TextField placeholder="Address" className="mt-2" onChange={(e) => this.inputHandler(e, "address")}/>
+                    <TextField placeholder="Fullname" className="mt-5" onChange={(e) => this.inputHandler(e, "fullName")} />
+                    <TextField placeholder="Username" className="mt-2" onChange={(e) => this.inputHandler(e, "username")} />
+                    <TextField placeholder="Address" className="mt-2" onChange={(e) => this.inputHandler(e, "address")} />
                     <TextField placeholder="Password" className="mt-2" onChange={(e) => this.inputHandler(e, "password")} />
                     <TextField placeholder="Confirm Password" className="mt-2" onChange={(e) => this.inputHandler(e, "repPassword")} />
                     <div className="d-flex justify-content-center">
