@@ -44,6 +44,7 @@ class ProductCard extends React.Component<ProductCardProps> {
             </div>
           </div>
           <ButtonUI
+            onClick
             type="outlined"
             style={{ fontSize: "12px", padding: "4px 8px" }}
           >

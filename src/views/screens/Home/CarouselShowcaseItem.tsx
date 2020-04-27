@@ -39,6 +39,7 @@ const CarouselShowcaseItem = ({
                 Selamat datang, masa depan.
               </p>
               <ButtonUI
+                onClick
                 type="outlined"
                 className="mt-5"
                 style={{
