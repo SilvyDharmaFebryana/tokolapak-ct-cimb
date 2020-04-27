@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import Home from "./views/screens/Home/Home";
 import Navbar from "./views/components/Navbar/Navbar";
-import AuthScreen from "./views/screens/Auth/AuthScreens";
+import AuthScreen from "./views/screens/Auth/AuthScreen";
 
 class App extends React.Component {
   render() {
