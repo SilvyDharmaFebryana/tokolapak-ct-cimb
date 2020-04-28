@@ -51,7 +51,7 @@ class Home extends React.Component {
   state = {
     activeIndex: 0,
     animating: false,
-    bestSellerProduct: []
+    bestSellerData: []
   };
 
   renderCarouselItems = () => {
@@ -114,7 +114,7 @@ class Home extends React.Component {
   getBestSellerProduct = () => {
     Axios.get(`${API_URL}/products`)
     .then((res) => {
-        this.setState({ bestSellerProduct: res.data })
+        this.setState({ bestSellerData: res.data })
     })
     .catch((err) => {
         console.log(err)
@@ -122,8 +122,8 @@ class Home extends React.Component {
   }
 
   renderProducts = () => {
-    return this.state.bestSellerProduct.map((val) => {
-        return <ProductCard className="m-2" />
+    return this.state.bestSellerData.map((val) => {
+        return <ProductCard className="m-2" data={val}/>
     })
   }
 

@@ -1,4 +1,6 @@
 import React from "react";
+import Axios from 'axios'
+import { API_URL } from "../../../constants/API";
 import "./ProductCard.css";
 import ButtonUI from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,10 +8,11 @@ import { faHeart, faStar } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 
 interface ProductCardData {
-  id: number;
-  productName: string;
-  price: number;
-  review: number;
+  id?: number;
+  productName?: string;
+  price?: number;
+  review?: number;
+  image?: string;
 }
 
 type ProductCardProps = {
@@ -18,17 +21,26 @@ type ProductCardProps = {
 };
 
 class ProductCard extends React.Component<ProductCardProps> {
+
   render() {
+
+    const { id, productName, price, review, image } = this.props.data
+
     return (
       <div className={`product-card d-inline-block ${this.props.className}`}>
         <img
-          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9.jpg"
-          alt=""
-          style={{ width: "224px" }}
+          src={image}
+          alt={this.props.data.productName}
+          style={{ width: "224px", height: "250px", objectFit: "contain" }}
         />
         <div>
-          <p className="mt-3">White T-Shirt</p>
-          <h5 style={{ fontWeight: "bolder" }}>Rp. 125.000</h5>
+          <p className="mt-3">{productName}</p>
+          <h5 style={{ fontWeight: "bolder" }}>
+            {new Intl.NumberFormat("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            }).format(price)}
+          </h5>
           <p className="small">Jakarta Selatan</p>
         </div>
         <div className="d-flex flex-row align-items-center justify-content-between mt-2">
@@ -44,7 +56,6 @@ class ProductCard extends React.Component<ProductCardProps> {
             </div>
           </div>
           <ButtonUI
-            onClick
             type="outlined"
             style={{ fontSize: "12px", padding: "4px 8px" }}
           >
