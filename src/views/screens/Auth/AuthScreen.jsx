@@ -11,7 +11,7 @@ class AuthScreen extends React.Component {
     username: "",
     password: "",
     fullName: "",
-    address: "",
+    email: "",
     repPassword: "",
     user: [],
 
