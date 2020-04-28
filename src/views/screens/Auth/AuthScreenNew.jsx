@@ -71,6 +71,18 @@ class AuthScreenNew extends React.Component {
         this.props.onLogin(newUser);
     };
 
+    checkboxHandler = (e, form) => {
+        const { checked } = e.target
+
+        this.setState({
+            [form]: {
+                ...this.state[form],
+                showPassword: checked,
+            }
+        })
+
+    }
+
     renderAuthComponent = () => {
         const { activePage } = this.state;
         if (activePage == "register") {
@@ -79,7 +91,7 @@ class AuthScreenNew extends React.Component {
                     <h3>Register</h3>
                     <p className="mt-4">
                         You will get the best recommendation for rent house in near of you
-          </p>
+                    </p>
                     <TextField
                         value={this.state.registerForm.username}
                         onChange={(e) => this.inputHandler(e, "username", "registerForm")}
@@ -103,7 +115,15 @@ class AuthScreenNew extends React.Component {
                         onChange={(e) => this.inputHandler(e, "password", "registerForm")}
                         placeholder="Password"
                         className="mt-2"
+                        type={this.state.registerForm.showPassword ? "text" : "password"}
                     />
+                    <input 
+                        type="checkbox" 
+                        className="mt-3" 
+                        name="showPasswordRegister" 
+                        onChange={ e => this.checkboxHandler(e, 'registerForm')}
+                    /> Show Password
+
                     <div className="d-flex justify-content-center">
                         <ButtonUI
                             type="contained"
@@ -111,7 +131,7 @@ class AuthScreenNew extends React.Component {
                             className="mt-4"
                         >
                             Register
-            </ButtonUI>
+                        </ButtonUI>
                     </div>
                 </div>
             );
@@ -134,7 +154,17 @@ class AuthScreenNew extends React.Component {
                         onChange={(e) => this.inputHandler(e, "password", "loginForm")}
                         placeholder="Password"
                         className="mt-2"
+                        type={this.state.loginForm.showPassword ? "text" : "password"}
                     />
+                    <input 
+                        type="checkbox" 
+                        className="mt-3" 
+                        name="showPasswordLogin"
+                        onChange={e => this.checkboxHandler(e, 'loginForm')} 
+                        /> 
+                        Show Password
+
+
                     <div className="d-flex justify-content-center">
                         <ButtonUI
                             onClick={this.loginBtnHandler}

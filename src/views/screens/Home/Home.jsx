@@ -1,4 +1,5 @@
 import React from "react";
+import Axios from 'axios'
 import { Link } from "react-router-dom";
 import { Carousel, CarouselControl, CarouselItem } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +18,7 @@ import iPadPro from "../../../assets/images/Showcase/iPad-Pro.png";
 import ButtonUI from "../../components/Button/Button";
 import CarouselShowcaseItem from "./CarouselShowcaseItem.tsx";
 import Colors from "../../../constants/Colors";
+import { API_URL } from "../../../constants/API";
 
 const dummy = [
   {
@@ -49,6 +51,7 @@ class Home extends React.Component {
   state = {
     activeIndex: 0,
     animating: false,
+    bestSellerProduct: []
   };
 
   renderCarouselItems = () => {
@@ -108,6 +111,26 @@ class Home extends React.Component {
     this.setState({ activeIndex: prevIndex });
   };
 
+  getBestSellerProduct = () => {
+    Axios.get(`${API_URL}/products`)
+    .then((res) => {
+        this.setState({ bestSellerProduct: res.data })
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+  }
+
+  renderProducts = () => {
+    return this.state.bestSellerProduct.map((val) => {
+        return <ProductCard className="m-2" />
+    })
+  }
+
+  componentDidMount() {
+    this.getBestSellerProduct()
+  }
+
   render() {
     return (
       <div>
@@ -147,11 +170,9 @@ class Home extends React.Component {
           {/* BEST SELLER SECTION */}
           <h2 className="text-center font-weight-bolder mt-5">BEST SELLER</h2>
           <div className="row d-flex flex-wrap justify-content-center">
-            <ProductCard className="m-2" />
-            <ProductCard className="m-2" />
-            <ProductCard className="m-2" />
-            <ProductCard className="m-2" />
-            <ProductCard className="m-2" />
+              {
+                this.renderProducts()
+              }
           </div>
         </div>
         {/* ABOUT SECTION */}
