@@ -6,6 +6,20 @@
       "repPassword": "123",
       "fullName": "silvy dharma febryana",
       "id": 1
+    },
+    {
+      "username": "doraemon",
+      "fullName": "Dora Emon",
+      "password": "password",
+      "email": "doraemon@mail.com",
+      "id": 2
+    },
+    {
+      "username": "pikachu",
+      "fullName": "Dora Emon",
+      "password": "password",
+      "email": "doraemon@mail.com",
+      "id": 3
     }
   ],
   "products": [
@@ -43,19 +57,7 @@
     },
     {
       "userId": 1,
-      "productId": 1,
-      "quantity": 1,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "productId": 2,
-      "quantity": 1,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "productId": 2,
+      "productId": 3,
       "quantity": 1,
       "id": 4
     }

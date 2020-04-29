@@ -1,7 +1,7 @@
 import React from "react";
-import Axios from 'axios'
 import { Link } from "react-router-dom";
 import { Carousel, CarouselControl, CarouselItem } from "reactstrap";
+import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShippingFast,
@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 
-import ProductCard from "../../components/Cards/ProductCard.tsx";
+import ProductCard from "../../components/Cards/ProductCard";
 
 import iPhoneX from "../../../assets/images/Showcase/iPhone-X.png";
 import iPhone8 from "../../../assets/images/Showcase/iPhone-8.png";
@@ -43,7 +43,7 @@ const dummy = [
     image: iPadPro,
     desc: `
     iPad Pro baru telah didesain ulang seutuhnya dan dilengkapi dengan teknologi Apple yang paling canggih. Ini akan membuat Anda berpikir ulang apa yang iPad mampu lakukan`,
-    id: 2,
+    id: 3,
   },
 ];
 

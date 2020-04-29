@@ -1,4 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+import Cookies from "universal-cookie";
+
 import TextField from "../../components/TextField/TextField";
 import ButtonUI from "../../components/Button/Button";
 import { connect } from "react-redux";
@@ -59,6 +63,9 @@ class AuthScreen extends React.Component {
 
 
   render() {
+    if (this.props.user.id > 0) {
+      return <Redirect to="/" />;
+    }
     return (
       <div className="container">
         {
@@ -134,4 +141,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);
-

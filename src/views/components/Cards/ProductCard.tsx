@@ -23,8 +23,7 @@ type ProductCardProps = {
 class ProductCard extends React.Component<ProductCardProps> {
 
   render() {
-
-    const { id, productName, price, review, image } = this.props.data
+    const { id, productName, price, review, image } = this.props.data;
 
     return (
       <div className={`product-card d-inline-block ${this.props.className}`}>
