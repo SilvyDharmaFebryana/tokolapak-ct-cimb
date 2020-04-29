@@ -51,7 +51,7 @@ class Home extends React.Component {
   state = {
     activeIndex: 0,
     animating: false,
-    bestSellerData: []
+    bestSellerProduct: []
   };
 
   renderCarouselItems = () => {
@@ -114,7 +114,7 @@ class Home extends React.Component {
   getBestSellerProduct = () => {
     Axios.get(`${API_URL}/products`)
     .then((res) => {
-        this.setState({ bestSellerData: res.data })
+        this.setState({ bestSellerProduct: res.data })
     })
     .catch((err) => {
         console.log(err)
@@ -122,8 +122,8 @@ class Home extends React.Component {
   }
 
   renderProducts = () => {
-    return this.state.bestSellerData.map((val) => {
-        return <ProductCard className="m-2" data={val} />
+    return this.state.bestSellerProduct.map((val) => {
+        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
     })
   }
 
@@ -135,7 +135,7 @@ class Home extends React.Component {
     return (
       <div>
         <div className="d-flex justify-content-center flex-row align-items-center my-3">
-          <Link to="/auth" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }}>
             <h6 className="mx-4 font-weight-bold">PHONE</h6>
           </Link>
           <Link to="/" style={{ color: "inherit" }}>

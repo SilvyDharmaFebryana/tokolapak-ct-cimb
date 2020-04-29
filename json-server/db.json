@@ -1,6 +1,5 @@
 {
-  "users": 
-  [
+  "users": [
     {
       "username": "silvy16",
       "password": "123",
@@ -9,7 +8,6 @@
       "id": 1
     }
   ],
-  
   "products": [
     {
       "productName": "iPhone 7 Plus",
@@ -35,6 +33,31 @@
       "desc": "HP Terbaikk loh mac LOHHH !!",
       "id": 3
     }
+  ],
+  "cart": [
+    {
+      "userId": 2,
+      "productId": 2,
+      "quantity": 1,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productId": 1,
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "productId": 2,
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "productId": 2,
+      "quantity": 1,
+      "id": 4
+    }
   ]
-  
 }

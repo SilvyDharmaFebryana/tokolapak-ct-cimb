@@ -10,6 +10,8 @@ import Home from "./views/screens/Home/Home";
 import Navbar from "./views/components/Navbar/Navbar";
 import AuthScreenNew from "./views/screens/Auth/AuthScreenNew";
 import { userKeepLogin } from "./redux/actions";
+import ProductDetails from "./views/screens/ProductDetails/ProductDetails";
+import Cart from "./views/screens/Cart/Cart";
 
 const cookieObj = new Cookie();
 
@@ -22,18 +24,29 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/auth" component={AuthScreenNew} />
-        </Switch>
-        <div style={{ height: "120px" }} />
-      </>
-    );
+    if (this.props.user.cookieChecked) {
+      return (
+        <>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/auth" component={AuthScreenNew} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/product/:productId" component={ProductDetails} />
+          </Switch>
+          <div style={{ height: "120px" }} />
+        </>
+      );
+    } else {
+      return <div>Loading ...</div>
+    }
+
   }
 }
+   
+
+
+
 const mapStateToProps = (state) => {
   return {
     user: state.user,

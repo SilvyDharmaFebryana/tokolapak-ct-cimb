@@ -10,28 +10,28 @@ const init_state = {
   role: "",
   errMsg: "",
   password: "",
-  repPassword: "",
+  cookieChecked: false,
 };
 
 export default (state = init_state, action) => {
   switch (action.type) {
     case ON_LOGIN_SUCCESS:
-      const { username, fullName, role, id, repPassword, password } = action.payload;
+      const { username, fullName, role, id, password, cookieChecked } = action.payload;
       return {
         ...state,
         username,
         password,
-        repPassword,
         fullName,
         role,
         id,
+        cookieChecked: true,
       };
     case ON_LOGIN_FAIL:
-      return { ...state, errMsg: action.payload };
+      return { ...state, errMsg: action.payload, cookieChecked: true };
     case ON_REGISTER_FAIL:
-      return { ...state, errMsg: action.payload };
+      return { ...state, errMsg: action.payload, cookieChecked: true };
     case ON_LOGOUT_SUCCESS:
-      return { init_state };
+      return { init_state, cookieChecked: true };
     default:
       return { ...state };
   }
