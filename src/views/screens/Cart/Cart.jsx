@@ -18,12 +18,11 @@ class Cart extends React.Component {
 
     };
 
-
     deleteDataHandler = (id) => {
         Axios.delete(`${API_URL}/cart/${id}`)
             .then((res) => {
                 console.log(res);
-                swal("Delete to cart", "", "success")
+                swal("success deleted", "", "success")
                 this.getDataHandler()
             })
             .catch((err) => {
