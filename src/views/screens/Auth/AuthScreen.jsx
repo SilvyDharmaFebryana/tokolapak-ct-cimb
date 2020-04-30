@@ -18,9 +18,8 @@ class AuthScreen extends React.Component {
     email: "",
     repPassword: "",
     user: [],
-
   }
-
+  
   isLoginHandler = () => {
     this.setState({ isCondition: true })
   }

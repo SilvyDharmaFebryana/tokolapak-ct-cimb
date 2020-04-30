@@ -69,25 +69,6 @@ class ProductDetails extends React.Component {
     }
 
 
-    getCart = (id) => {
-
-        Axios.get(`${API_URL}/cart/${id}`, {
-            params: {
-                userId: this.props.user.id,
-                productId: this.state.productData.id,
-                _expand: "product"
-            }
-        })
-            .then((res) => {
-                console.log(res.data);
-                this.setState({ productCartAlready: res.data })
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
-
-
     getProductData = () => {
         let productId = this.props.match.params.productId;
 

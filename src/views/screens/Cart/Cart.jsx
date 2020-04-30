@@ -14,11 +14,21 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/";
 class Cart extends React.Component {
 
     state = {
+        transactionDetails: {
+            userId: "",
+            fullName: "",
+            address: "",
+            status: "pending",
+            productList: [],
+            subTotals: 0
+        },
         listProductCart: [],
-        
     };
 
     getDataHandler = () => {
+
+        let subTotal = 0
+
         Axios.get(`${API_URL}/cart`, {
             params: {
                 userId: this.props.user.id,
@@ -26,12 +36,32 @@ class Cart extends React.Component {
             }
         })
             .then((res) => {
-                console.log(res.data);
-                this.setState({ listProductCart: res.data })
+
+                res.data.map((val) => {
+                    const { quantity, product } = val;
+                    const { price } = product;
+                    subTotal += quantity * price
+                })
+
+                this.setState({
+                    transactionDetails: {
+                        ...this.state.transactionDetails,
+                        productList: res.data,
+                        subTotals: subTotal,
+                        fullName: this.props.user.fullName,
+                        address: this.props.user.address,
+                        userId: this.props.user.id
+                        
+                    }
+                })
+
+                console.log(this.state.transactionDetails.productList)
+                console.log(this.state.transactionDetails);
             })
             .catch((err) => {
                 console.log(err);
             })
+
     }
 
     deleteDataHandler = (id) => {
@@ -50,8 +80,8 @@ class Cart extends React.Component {
     }
 
     renderCartData = () => {
-        const { listProductCart } = this.state;
-        return listProductCart.map((val, idx) => {
+        const { productList } = this.state.transactionDetails
+        return productList.map((val, idx) => {
             return (
                 <tr>
                     <td> {idx + 1} </td>
@@ -70,8 +100,8 @@ class Cart extends React.Component {
     };
 
     checkoutHandlder = () => {
-        const { listProductCart } = this.state
-        return listProductCart.map((val, idx) => {
+        const { productList } = this.state.transactionDetails
+        return productList.map((val, idx) => {
             const { quantity, product } = val;
             const { productName, price } = product;
             const prices = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(price)
@@ -88,23 +118,24 @@ class Cart extends React.Component {
         })
     }
 
-    totalPrices = () => {
-        const { listProductCart } = this.state
-        let subTotal = 0
-        
-        return listProductCart.map((val, idx) => {
-            const { quantity, product } = val;
-            const { price } = product; 
-            return (
-                subTotal += (quantity * price)
-            )
-        })
-    }
 
-    
     confirmToPay = () => {
 
-    }   
+        Axios.post(`${API_URL}/transactions`, this.state.transactionDetails)
+        .then((res) => {
+            console.log(res);
+            this.state.transactionDetails.productList.map((val) => {
+
+                this.deleteDataHandler(val.id)
+                console.log(val.productId);
+                
+            })
+        })
+        .catch((err) => {
+            console.log(err);
+            
+        })
+    }
 
 
 
@@ -114,49 +145,49 @@ class Cart extends React.Component {
         return (
             <div className="container">
                 {
-                    this.state.listProductCart.length == 0 ? (
+                    this.state.transactionDetails.productList.length == 0 ? (
                         <Alert color="primary" className="mt-4">Your cart is empty! <Link to="/">Go Shopping</Link></Alert>
                     ) :
                         <>
-                        <center>
-                            <Table className="table table-striped" style={{ width: "80%" }} >
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Product Name</th>
-                                        <th scope="col">Qty</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {this.renderCartData()}
-                                </tbody>
-                            </Table>
+                            <center>
+                                <Table className="table table-striped" style={{ width: "80%" }} >
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Product Name</th>
+                                            <th scope="col">Qty</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {this.renderCartData()}
+                                    </tbody>
+                                </Table>
 
-                            <div>
-                                <ButtonUI type="outlined" id="toggler" style={{ marginBottom: '1rem' }}>
-                                    Checkout
+                                <div>
+                                    <ButtonUI type="outlined" id="toggler" style={{ marginBottom: '1rem' }}>
+                                        Checkout
                                 </ButtonUI>
 
-                            </div>
-                        </center>
+                                </div>
+                            </center>
 
-                        <div>
-                            <UncontrolledCollapse toggler="#toggler">
-                                <Card>
-                                    <CardBody>
+                            <div>
+                                <UncontrolledCollapse toggler="#toggler">
+                                    <Card>
+                                        <CardBody>
                                             <div className="d-flex flex-row py-2 justify-content-center" style={{ backgroundColor: "#e6eeff" }}>
-                                            <FontAwesomeIcon
-                                                className="mr-2 mt-2"
-                                                icon={faShoppingCart}
-                                                style={{ fontSize: 24 }}
-                                            />
-                                            <h4 className="mt-2">Checkout</h4>
-                                        </div>
-                                        
-                                        <div className="mt-3">
+                                                <FontAwesomeIcon
+                                                    className="mr-2 mt-2"
+                                                    icon={faShoppingCart}
+                                                    style={{ fontSize: 24 }}
+                                                />
+                                                <h4 className="mt-2">Checkout</h4>
+                                            </div>
+
+                                            <div className="mt-3">
                                                 <Table>
                                                     <thead>
                                                         <tr>
@@ -176,21 +207,21 @@ class Cart extends React.Component {
                                                         <tr>
                                                             <td colSpan={4} className="text-center"> Total</td>
                                                             <td>
-                                                                {  
-                                                                    this.totalPrices()
+                                                                {
+                                                                    this.state.transactionDetails.subTotals
                                                                 }
                                                             </td>
                                                         </tr>
                                                     </tfoot>
                                                 </Table>
-                                        </div>                               
-                                        <div>
-                                            <ButtonUI type="contained">Confirm to Pay</ButtonUI>
-                                        </div>
-                                    </CardBody>
-                                </Card>
-                            </UncontrolledCollapse>
-                        </div>
+                                            </div>
+                                            <div>
+                                                <ButtonUI type="contained" onClick={this.confirmToPay}>Confirm to Pay</ButtonUI>
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                </UncontrolledCollapse>
+                            </div>
                         </>
                 }
             </div>
@@ -207,18 +238,3 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(Cart)
 
-
-//     < div >
-//     <Button color="primary" id="toggler" style={{ marginBottom: '1rem' }}>
-//         Toggle
-//     </Button>
-//     <UncontrolledCollapse toggler="#toggler">
-//         <Card>
-//             <CardBody>
-//                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magni, voluptas debitis
-//                 similique porro a molestias consequuntur earum odio officiis natus, amet hic, iste sed
-//                 dignissimos esse fuga! Minus, alias.
-//         </CardBody>
-//         </Card>
-//     </UncontrolledCollapse>
-//   </div >

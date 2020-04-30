@@ -10,9 +10,9 @@ import Home from "./views/screens/Home/Home";
 import Navbar from "./views/components/Navbar/Navbar";
 import AuthScreenNew from "./views/screens/Auth/AuthScreenNew";
 import ProductDetails from "./views/screens/ProductDetails/ProductDetails";
-import { userKeepLogin, cookieChecker } from "./redux/actions";
 import Cart from "./views/screens/Cart/Cart";
 import AdminDashboard from "./views/screens/Admin/AdminDashboard";
+import { userKeepLogin, cookieChecker } from "./redux/actions";
 
 const cookieObj = new Cookie();
 
@@ -24,17 +24,16 @@ class App extends React.Component {
       if (cookieResult) {
         this.props.keepLogin(cookieResult);
       } else {
-        this.props.cookieChecker(); 
-        //cek apakah sudah berhasil get data, dan memastikan ada perubahan di redux
-      }   
+        this.props.cookieChecker();
+      }
     }, 2000);
   }
 
   renderAdminRoutes = () => {
     if (this.props.user.role === "admin") {
-      return <Route exact path="/admin/dashboard" component={AdminDashboard} />
+      return <Route exact path="/admin/dashboard" component={AdminDashboard} />;
     }
-  }
+  };
 
   render() {
     if (this.props.user.cookieChecked) {
@@ -74,3 +73,13 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App));
+
+/**
+ * PR
+ * 1. Add to cart, jika barang double, qty yg akan bertambah
+ * 2. Di Home, ketika click PHONE/LAPTOP/TAB/DESKTOP
+ * 3. Di navbar, ketika ketik, secara otomatis filter products
+ * 4. Di cart, buat button checkout, serta dengan proses checkout
+ * 5. Ketika confirm checkout, lakukan POST request ke db.json ke transaction
+ *    -> lalu cart harus kosong
+ */

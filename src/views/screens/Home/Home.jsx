@@ -51,7 +51,12 @@ class Home extends React.Component {
   state = {
     activeIndex: 0,
     animating: false,
-    bestSellerProduct: []
+    bestSellerProduct: [],
+    phoneList: [],
+    tabList: [],
+    desktopList: [],
+    laptopList: [],
+    activeProduct: ""
   };
 
   renderCarouselItems = () => {
@@ -122,30 +127,124 @@ class Home extends React.Component {
   }
 
   renderProducts = () => {
-    return this.state.bestSellerProduct.map((val) => {
+    if ( this.state.activeProduct === "Phone" ){
+        return this.state.phoneList.map((val) => {
+          return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+        })
+    } else if (this.state.activeProduct === "Tab") {
+      return this.state.tabList.map((val) => {
         return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+      })
+    } else if (this.state.activeProduct === "Laptop") {
+      return this.state.laptopList.map((val) => {
+        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+      })
+    } else if (this.state.activeProduct === "Desktop") {
+      return this.state.desktopList.map((val) => {
+        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+      })
+    } else if (this.state.activeProduct === "Desktop") {
+      return this.state.bestSellerProduct.map((val) => {
+        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+      })
+    } else {
+      return this.state.bestSellerProduct.map((val) => {
+        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+      })
+    }
+   
+  }
+
+
+  componentDidMount() {
+
+    this.getBestSellerProduct()
+    this.getTabList()
+    this.getDesktopList()
+    this.getLaptopList()
+    this.getPhoneList()
+  }
+
+
+  getPhoneList = () => {
+    Axios.get(`${API_URL}/products/`, {
+      params :{
+        category: "Phone"
+      }
+     })
+    .then((res) => {
+      console.log(res);
+        this.setState({ phoneList: res.data })
+    })
+    .catch((err) => {
+      console.log(err);  
     })
   }
 
-  componentDidMount() {
-    this.getBestSellerProduct()
+  getTabList = () => {
+    Axios.get(`${API_URL}/products/`, {
+      params: {
+        category: "Tab"
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ tabList: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  getDesktopList = () => {
+    Axios.get(`${API_URL}/products/`, {
+      params: {
+        category: "Desktop"
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ desktopList: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  getLaptopList = () => {
+    Axios.get(`${API_URL}/products/`, {
+      params: {
+        category: "Laptop"
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({ laptopList: res.data })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   render() {
     return (
       <div>
         <div className="d-flex justify-content-center flex-row align-items-center my-3">
-          <Link to="/" style={{ color: "inherit" }}>
-            <h6 className="mx-4 font-weight-bold">PHONE</h6>
+          {/* <ButtonUI type="textual" onClick={() => this.setState({ activeProduct: "Phone" })}>Phone</ButtonUI> */}
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Phone" })}>
+            <h6 className="mx-4 font-weight-bold"> PHONE</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Laptop" })}>
             <h6 className="mx-4 font-weight-bold">LAPTOP</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Tab" })}>
             <h6 className="mx-4 font-weight-bold">TAB</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Desktop" })}>
             <h6 className="mx-4 font-weight-bold">DESKTOP</h6>
+          </Link>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "All" })}>
+            <h6 className="mx-4 font-weight-bold">ALL BEST SELLER</h6>
           </Link>
         </div>
         <Carousel

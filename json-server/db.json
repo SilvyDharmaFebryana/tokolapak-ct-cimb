@@ -5,6 +5,7 @@
       "password": "123",
       "repPassword": "123",
       "fullName": "silvy dharma febryana",
+      "address": "bekasi",
       "role": "user",
       "id": 1
     },
@@ -15,6 +16,14 @@
       "email": "admin@mail.com",
       "role": "admin",
       "id": 2
+    },
+    {
+      "username": "bear2",
+      "fullName": "we are bear",
+      "password": "1111",
+      "email": "bearweare@mail.com",
+      "role": "user",
+      "id": 3
     }
   ],
   "products": [
@@ -41,37 +50,636 @@
       "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
       "desc": "HP Terbaikk loh mac LOHHH !!",
       "id": 3
+    },
+    {
+      "name": "iMac (2019)",
+      "price": "23000000",
+      "category": "Desktop",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+      "desc": "Desktop khusus para sultan gan.",
+      "id": 4,
+      "productName": "iMac (2019)"
     }
   ],
-  "cart": [
+  "cart": [],
+  "transactions": [
     {
-      "userId": 2,
-      "productId": 2,
-      "quantity": 1,
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 4,
+          "id": 2,
+          "productName": "iPhone 7+",
+          "price": 5000000,
+          "category": "Phone",
+          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+          "desc": "HP Terbaikk loh yekan",
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 2,
+          "id": 3,
+          "productName": "iPad Pro 3",
+          "price": 15000000,
+          "category": "Tab",
+          "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+          "desc": "HP Terbaikk loh ipad man",
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        }
+      ],
+      "subTotals": 70000000,
       "id": 1
     },
     {
       "userId": 1,
-      "productId": 1,
-      "quantity": 2,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 4,
+          "id": 2,
+          "productName": "iPhone 7+",
+          "price": 5000000,
+          "category": "Phone",
+          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+          "desc": "HP Terbaikk loh yekan",
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 2,
+          "id": 3,
+          "productName": "iPad Pro 3",
+          "price": 15000000,
+          "category": "Tab",
+          "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+          "desc": "HP Terbaikk loh ipad man",
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        }
+      ],
+      "subTotals": 70000000,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 4,
+          "id": 2,
+          "productName": "iPhone 7+",
+          "price": 5000000,
+          "category": "Phone",
+          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+          "desc": "HP Terbaikk loh yekan",
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 2,
+          "id": 3,
+          "productName": "iPad Pro 3",
+          "price": 15000000,
+          "category": "Tab",
+          "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+          "desc": "HP Terbaikk loh ipad man",
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        }
+      ],
+      "subTotals": 70000000,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 4,
+          "id": 2,
+          "productName": "iPhone 7+",
+          "price": 5000000,
+          "category": "Phone",
+          "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+          "desc": "HP Terbaikk loh yekan",
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 2,
+          "id": 3,
+          "productName": "iPad Pro 3",
+          "price": 15000000,
+          "category": "Tab",
+          "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+          "desc": "HP Terbaikk loh ipad man",
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        }
+      ],
+      "subTotals": 70000000,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        }
+      ],
+      "subTotals": 20000000,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 1,
+          "id": 5,
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 1,
+          "id": 6,
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 4,
+          "quantity": 1,
+          "id": 7,
+          "product": {
+            "name": "iMac (2019)",
+            "price": "23000000",
+            "category": "Desktop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "desc": "Desktop khusus para sultan gan.",
+            "id": 4,
+            "productName": "iMac (2019)"
+          }
+        }
+      ],
+      "subTotals": 63000000,
       "id": 6
     },
     {
       "userId": 1,
-      "productId": 2,
-      "quantity": 3,
-      "id": 7,
-      "productName": "iPad Pro 3",
-      "price": 15000000,
-      "category": "Tab",
-      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-      "desc": "HP Terbaikk loh ipad man"
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 3,
+          "quantity": 1,
+          "id": 4,
+          "product": {
+            "productName": "Macbook Pro",
+            "price": 20000000,
+            "category": "Laptop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "desc": "HP Terbaikk loh mac LOHHH !!",
+            "id": 3
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 1,
+          "id": 5,
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 1,
+          "id": 6,
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 4,
+          "quantity": 1,
+          "id": 7,
+          "product": {
+            "name": "iMac (2019)",
+            "price": "23000000",
+            "category": "Desktop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "desc": "Desktop khusus para sultan gan.",
+            "id": 4,
+            "productName": "iMac (2019)"
+          }
+        }
+      ],
+      "subTotals": 63000000,
+      "id": 7
     },
     {
       "userId": 1,
-      "productId": 3,
-      "quantity": 2,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 1,
+          "id": 5,
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 1,
+          "id": 6,
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 4,
+          "quantity": 1,
+          "id": 7,
+          "product": {
+            "name": "iMac (2019)",
+            "price": "23000000",
+            "category": "Desktop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "desc": "Desktop khusus para sultan gan.",
+            "id": 4,
+            "productName": "iMac (2019)"
+          }
+        }
+      ],
+      "subTotals": 43000000,
       "id": 8
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 1,
+          "id": 5,
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 1,
+          "id": 6,
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 4,
+          "quantity": 1,
+          "id": 7,
+          "product": {
+            "name": "iMac (2019)",
+            "price": "23000000",
+            "category": "Desktop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "desc": "Desktop khusus para sultan gan.",
+            "id": 4,
+            "productName": "iMac (2019)"
+          }
+        }
+      ],
+      "subTotals": 43000000,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 1,
+          "id": 5,
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 1,
+          "id": 6,
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 4,
+          "quantity": 1,
+          "id": 7,
+          "product": {
+            "name": "iMac (2019)",
+            "price": "23000000",
+            "category": "Desktop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "desc": "Desktop khusus para sultan gan.",
+            "id": 4,
+            "productName": "iMac (2019)"
+          }
+        }
+      ],
+      "subTotals": 43000000,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "bekasi",
+      "status": "pending",
+      "productList": [
+        {
+          "userId": 1,
+          "productId": 1,
+          "quantity": 1,
+          "id": 5,
+          "product": {
+            "productName": "iPhone 7+",
+            "price": 5000000,
+            "category": "Phone",
+            "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "desc": "HP Terbaikk loh yekan",
+            "id": 1
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 2,
+          "quantity": 1,
+          "id": 6,
+          "product": {
+            "productName": "iPad Pro 3",
+            "price": 15000000,
+            "category": "Tab",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+            "desc": "HP Terbaikk loh ipad man",
+            "id": 2
+          }
+        },
+        {
+          "userId": 1,
+          "productId": 4,
+          "quantity": 1,
+          "id": 7,
+          "product": {
+            "name": "iMac (2019)",
+            "price": "23000000",
+            "category": "Desktop",
+            "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "desc": "Desktop khusus para sultan gan.",
+            "id": 4,
+            "productName": "iMac (2019)"
+          }
+        }
+      ],
+      "subTotals": 43000000,
+      "id": 11
     }
   ]
 }

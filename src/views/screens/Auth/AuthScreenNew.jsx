@@ -6,6 +6,7 @@ import Cookies from "universal-cookie";
 import TextField from "../../components/TextField/TextField";
 import ButtonUI from "../../components/Button/Button";
 import "./AuthScreen.css";
+import swal from 'sweetalert'
 
 // actions
 import { registerHandler, loginHandler } from "../../../redux/actions";
@@ -30,8 +31,9 @@ class AuthScreenNew extends React.Component {
 
     componentDidUpdate() {
         if (this.props.user.id) {
+            swal("Success!", `Berhasil masuk sebagai ${this.props.user.username}`, "success")
             const cookie = new Cookies();
-            cookie.set("authData", JSON.stringify(this.props.user));
+            cookie.set("authData", JSON.stringify(this.props.user), { path: "/" });
         }
     }
 

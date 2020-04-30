@@ -24,8 +24,8 @@ export const loginHandler = (userData) => {
                         type: ON_LOGIN_SUCCESS,
                         payload: res.data[0],
                     });
-                    swal("Success", `Berhasil login sebagai ${username}`, "success")
                 } else {
+                    // alert("masuk");
                     dispatch({
                         type: ON_LOGIN_FAIL,
                         payload: "Username atau password salah",
@@ -65,7 +65,7 @@ export const userKeepLogin = (userData) => {
 };
 
 export const logoutHandler = () => {
-    cookieObj.remove("authData");
+    cookieObj.remove("authData", { path: "/" });
     return {
         type: ON_LOGOUT_SUCCESS,
     };
@@ -85,7 +85,7 @@ export const registerHandler = (userData) => {
                         payload: "Username sudah digunakan",
                     });
                 } else {
-                    Axios.post(`${API_URL}/users`, {...userData, role: "user" })
+                    Axios.post(`${API_URL}/users`, { ...userData, role: "user" })
                         .then((res) => {
                             console.log(res.data);
                             dispatch({

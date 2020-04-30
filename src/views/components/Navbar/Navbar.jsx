@@ -4,6 +4,12 @@ import { connect } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu,
+} from "reactstrap";
 
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 
@@ -20,6 +26,7 @@ class Navbar extends React.Component {
   state = {
     searchBarIsFocused: false,
     searcBarInput: "",
+    dropdownOpen: false,
   };
 
 
@@ -33,18 +40,48 @@ class Navbar extends React.Component {
     if (this.props.user.id) {
       return (
         <>
-        <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
-        <p className="small ml-3 mr-4">{this.props.user.username}</p>
-        <Link className="d-flex flex-row" to="/cart" style={{ textDecoration: "none", color: "inherit" }} >
-          <FontAwesomeIcon
-            className="mr-2"
-            icon={faShoppingCart}
-            style={{ fontSize: 24 }}
-          />
-          <CircleBg>
-            <small style={{ color: "#3C64B1", fontWeight: "bold" }}>0</small>
-          </CircleBg>
-        </Link>
+          <Dropdown
+            toggle={this.toggleDropdown}
+            isOpen={this.state.dropdownOpen}
+          >
+            <DropdownToggle tag="div" className="d-flex">
+              <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
+              <p className="small ml-3 mr-4">{this.props.user.username}</p>
+            </DropdownToggle>
+            <DropdownMenu className="mt-2">
+              <DropdownItem>
+                <Link
+                  style={{ color: "inherit", textDecoration: "none" }}
+                  to="/admin/dashboard"
+                >
+                  Dashboard
+                    </Link>
+              </DropdownItem>
+              <DropdownItem>Members</DropdownItem>
+              <DropdownItem><Link
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/cart"
+              >
+                Payment
+                    </Link></DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <Link
+            className="d-flex flex-row"
+            to="/cart"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <FontAwesomeIcon
+              className="mr-2"
+              icon={faShoppingCart}
+              style={{ fontSize: 24 }}
+            />
+            <CircleBg>
+              <small style={{ color: "#3C64B1", fontWeight: "bold" }}>
+                4
+                  </small>
+            </CircleBg>
+          </Link>
         <Link className="ml-4" to="/auth" style={{ textDecoration: "none", color: "inherit" }} onClick={this.onLogout}><ButtonUI type="contained" >Logout</ButtonUI></Link>
         </>
       )
@@ -69,6 +106,15 @@ class Navbar extends React.Component {
     this.setState({ searchBarIsFocused: false });
   };
 
+  logoutBtnHandler = () => {
+    this.props.onLogout();
+    // this.forceUpdate();
+  };
+
+  toggleDropdown = () => {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen });
+  };
+
   render() {
     return (
       <div className="d-flex flex-row justify-content-between align-items-center py-4 navbar-container">
@@ -77,7 +123,10 @@ class Navbar extends React.Component {
             LOGO
           </Link>
         </div>
-        <div style={{ flex: 1 }} className="px-5">
+        <div
+          style={{ flex: 1 }}
+          className="px-5 d-flex flex-row justify-content-start"
+        >
           <input
             onFocus={this.onFocus}
             onBlur={this.onBlur}
@@ -90,36 +139,11 @@ class Navbar extends React.Component {
         </div>
         <div className="d-flex flex-row align-items-center">
 
-          {/* {
-            this.props.user.id ? */}
-            <>
-                {/* <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
-                <p className="small ml-3 mr-4">{this.props.user.username}</p>
-                <Link className="d-flex flex-row" to="/cart" style={{ textDecoration: "none", color: "inherit" }} >
-                  <FontAwesomeIcon
-                    className="mr-2"
-                    icon={faShoppingCart}
-                    style={{ fontSize: 24 }}
-                  />
-                  <CircleBg>
-                    <small style={{ color: "#3C64B1", fontWeight: "bold" }}>0</small>
-                  </CircleBg> 
-                </Link> */}
-            </> 
-            <>
-
             {
               this.showButtonLogout()
             }
-                {/* <ButtonUI className="mr-3" type="textual">
-                  <Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign in</Link>
-                </ButtonUI>
-                <ButtonUI type="contained"><Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign up</Link></ButtonUI> */}
-            </>
-          {/* } */}
-
-          
-          
+             
+        
         </div>
       </div>
     );
@@ -135,6 +159,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = { //connect function2
     logoutHandler,
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
