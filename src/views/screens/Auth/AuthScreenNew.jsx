@@ -23,6 +23,7 @@ class AuthScreenNew extends React.Component {
             fullName: "",
             email: "",
             password: "",
+            role: "user",
             showPassword: false,
         },
     };

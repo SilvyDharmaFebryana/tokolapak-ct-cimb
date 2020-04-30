@@ -2,6 +2,7 @@ import Axios from "axios";
 import { API_URL } from "../../constants/API";
 import Cookie from "universal-cookie";
 import userTypes from "../types/user";
+import swal from "sweetalert";
 
 const { ON_LOGIN_FAIL, ON_LOGIN_SUCCESS, ON_LOGOUT_SUCCESS } = userTypes;
 
@@ -23,8 +24,8 @@ export const loginHandler = (userData) => {
                         type: ON_LOGIN_SUCCESS,
                         payload: res.data[0],
                     });
+                    swal("Success", `Berhasil login sebagai ${username}`, "success")
                 } else {
-                    alert("masuk");
                     dispatch({
                         type: ON_LOGIN_FAIL,
                         payload: "Username atau password salah",
@@ -84,7 +85,7 @@ export const registerHandler = (userData) => {
                         payload: "Username sudah digunakan",
                     });
                 } else {
-                    Axios.post(`${API_URL}/users`, userData)
+                    Axios.post(`${API_URL}/users`, {...userData, role: "user" })
                         .then((res) => {
                             console.log(res.data);
                             dispatch({

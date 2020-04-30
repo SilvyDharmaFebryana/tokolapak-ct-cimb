@@ -9,6 +9,8 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 import "./Navbar.css";
 import ButtonUI from "../Button/Button.tsx";
+import swal from 'sweetalert'
+import { logoutHandler } from '../../../redux/actions'
 
 const CircleBg = ({ children }) => {
   return <div className="circle-bg">{children}</div>;
@@ -19,6 +21,45 @@ class Navbar extends React.Component {
     searchBarIsFocused: false,
     searcBarInput: "",
   };
+
+
+  onLogout = () => {
+    // cookieObject.remove("authData")
+    this.props.logoutHandler()
+    swal('anda akan keluar')
+  }
+
+  showButtonLogout = () => {
+    if (this.props.user.id) {
+      return (
+        <>
+        <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
+        <p className="small ml-3 mr-4">{this.props.user.username}</p>
+        <Link className="d-flex flex-row" to="/cart" style={{ textDecoration: "none", color: "inherit" }} >
+          <FontAwesomeIcon
+            className="mr-2"
+            icon={faShoppingCart}
+            style={{ fontSize: 24 }}
+          />
+          <CircleBg>
+            <small style={{ color: "#3C64B1", fontWeight: "bold" }}>0</small>
+          </CircleBg>
+        </Link>
+        <Link className="ml-4" to="/auth" style={{ textDecoration: "none", color: "inherit" }} onClick={this.onLogout}><ButtonUI type="contained" >Logout</ButtonUI></Link>
+        </>
+      )
+    } else {
+      return (
+        <>
+        <ButtonUI className="mr-3" type="textual">
+          <Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign in</Link>
+        </ButtonUI>
+        <ButtonUI type="contained"><Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign up</Link></ButtonUI>
+        </>
+      )
+    }
+  }
+
 
   onFocus = () => {
     this.setState({ searchBarIsFocused: true });
@@ -49,27 +90,33 @@ class Navbar extends React.Component {
         </div>
         <div className="d-flex flex-row align-items-center">
 
-          {
-            this.props.user.id ?
+          {/* {
+            this.props.user.id ? */}
             <>
-                <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
+                {/* <FontAwesomeIcon icon={faUser} style={{ fontSize: 24 }} />
                 <p className="small ml-3 mr-4">{this.props.user.username}</p>
-                <FontAwesomeIcon
-                  className="mr-2"
-                  icon={faShoppingCart}
-                  style={{ fontSize: 24 }}
-                />
-                <CircleBg>
-                  <small style={{ color: "#3C64B1", fontWeight: "bold" }}>0</small>
-                </CircleBg> 
-            </> :
+                <Link className="d-flex flex-row" to="/cart" style={{ textDecoration: "none", color: "inherit" }} >
+                  <FontAwesomeIcon
+                    className="mr-2"
+                    icon={faShoppingCart}
+                    style={{ fontSize: 24 }}
+                  />
+                  <CircleBg>
+                    <small style={{ color: "#3C64B1", fontWeight: "bold" }}>0</small>
+                  </CircleBg> 
+                </Link> */}
+            </> 
             <>
-                <ButtonUI className="mr-3" type="textual">
+
+            {
+              this.showButtonLogout()
+            }
+                {/* <ButtonUI className="mr-3" type="textual">
                   <Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign in</Link>
                 </ButtonUI>
-                <ButtonUI type="contained"><Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign up</Link></ButtonUI>
+                <ButtonUI type="contained"><Link style={{ textDecoration: "none", color: "inherit" }} to="/auth">Sign up</Link></ButtonUI> */}
             </>
-          }
+          {/* } */}
 
           
           
@@ -85,5 +132,9 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = { //connect function2
+    logoutHandler,
+};
 
-export default connect(mapStateToProps)(Navbar);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

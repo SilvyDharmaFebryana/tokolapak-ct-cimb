@@ -12,19 +12,28 @@ import AuthScreenNew from "./views/screens/Auth/AuthScreenNew";
 import ProductDetails from "./views/screens/ProductDetails/ProductDetails";
 import { userKeepLogin, cookieChecker } from "./redux/actions";
 import Cart from "./views/screens/Cart/Cart";
+import AdminDashboard from "./views/screens/Admin/AdminDashboard";
 
 const cookieObj = new Cookie();
 
 class App extends React.Component {
+  
   componentDidMount() {
     setTimeout(() => {
       let cookieResult = cookieObj.get("authData");
       if (cookieResult) {
         this.props.keepLogin(cookieResult);
       } else {
-        this.props.cookieChecker();
+        this.props.cookieChecker(); 
+        //cek apakah sudah berhasil get data, dan memastikan ada perubahan di redux
       }   
     }, 2000);
+  }
+
+  renderAdminRoutes = () => {
+    if (this.props.user.role === "admin") {
+      return <Route exact path="/admin/dashboard" component={AdminDashboard} />
+    }
   }
 
   render() {
@@ -37,6 +46,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/auth" component={AuthScreenNew} />
             <Route exact path="/cart" component={Cart} />
+            {this.renderAdminRoutes()}
             <Route exact path="/product/:productId" component={ProductDetails} />
           </Switch>
           <div style={{ height: "120px" }} />

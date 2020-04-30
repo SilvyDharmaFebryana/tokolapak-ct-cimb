@@ -7,10 +7,11 @@ type ButtonTypes = {
   style?: CSSProperties;
   className?: string;
   onClick?: any;
+  id: string;
 };
 
 const ButtonUI = (props: ButtonTypes) => {
-  let { type, children, style, className, onClick } = props;
+  let { type, children, style, className, onClick, id } = props;
 
   type = type || "contained";
 
@@ -19,6 +20,7 @@ const ButtonUI = (props: ButtonTypes) => {
       style={style}
       onClick={onClick}
       className={`custom-btn custom-btn-${type} ${className}`}
+      id={id}
     >
       {children}
     </div>

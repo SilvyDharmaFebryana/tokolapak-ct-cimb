@@ -6,6 +6,8 @@ import TextField from '../../components/TextField/TextField'
 import Axios from 'axios'
 import { API_URL } from "../../../constants/API";
 import swal from 'sweetalert'
+import { throwStatement } from '@babel/types'
+
 
 class ProductDetails extends React.Component {
     state = {
@@ -15,42 +17,94 @@ class ProductDetails extends React.Component {
             price: 0,
             desc: "",
             image: "",
-        }
+            quantity: 0,
+        },
+        productCartAlready: []
     };
+    
+
 
     addToCartHandler = () => {
-        //POST ke /cart
-        console.log(this.props.user.id);
-        
-        Axios.post(`${API_URL}/cart`, {
-            userId: this.props.user.id,
-            productId: this.state.productData.id,
-            quantity: 1,
-        })
+        Axios.get(`${API_URL}/cart/`, {
+            params: {
+                userId: this.props.user.id,
+                productId: this.state.productData.id
+            }
+        }) 
         .then((res) => {
-            console.log(res);
-            swal("", "Your item has been add to your cart", "success")
+            if (res.data.length == 0){
+                Axios.post(`${API_URL}/cart`, {
+                    userId: this.props.user.id,
+                    productId: this.state.productData.id,
+                    quantity: 1,
+                })
+                    .then((res) => {
+                        console.log(res.data);
+                        swal("", "Your item has been add to your cart", "success")
+                    })
+                    .catch((err) => {
+                        console.log(err);
+
+                    })
+            } else {    
+                Axios.patch(`${API_URL}/cart/${res.data[0].id}`,{
+                    ...this.state.productData,
+                    quantity: res.data[0].quantity + 1
+                })
+                .then((res) => {
+                    console.log(res);                  
+                    swal("", "Your item has been add to your cart", "success")
+                })
+                .catch((err) => {
+                    console.log(err);
+                    
+                })
+
+            }
         })
         .catch((err) => {
             console.log(err);
             
         })
-
     }
 
-    componentDidMount() {
+
+    getCart = (id) => {
+
+        Axios.get(`${API_URL}/cart/${id}`, {
+            params: {
+                userId: this.props.user.id,
+                productId: this.state.productData.id,
+                _expand: "product"
+            }
+        })
+            .then((res) => {
+                console.log(res.data);
+                this.setState({ productCartAlready: res.data })
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+
+    getProductData = () => {
         let productId = this.props.match.params.productId;
 
         Axios.get(`${API_URL}/products/${productId}`)
             .then((res) => {
-                console.log(res);
+                console.log(res.data);
                 this.setState({
-                   productData: res.data
+                    productData: res.data
                 });
             })
             .catch((err) => {
                 console.log(err);
             });
+    }
+
+    componentDidMount() {
+        this.getProductData()
     }
     
     
@@ -88,6 +142,7 @@ class ProductDetails extends React.Component {
                         <div className="d-flex flex-row mt-4">
                             <ButtonUI type="contained" onClick={this.addToCartHandler}>Add to cart</ButtonUI>
                             <ButtonUI className="ml-4" type="outlined">Add to wishlist</ButtonUI>
+                           
                         </div>
                     </div>
                 </div>

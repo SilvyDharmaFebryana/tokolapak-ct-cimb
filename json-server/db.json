@@ -5,26 +5,21 @@
       "password": "123",
       "repPassword": "123",
       "fullName": "silvy dharma febryana",
+      "role": "user",
       "id": 1
     },
     {
-      "username": "doraemon",
-      "fullName": "Dora Emon",
-      "password": "password",
-      "email": "doraemon@mail.com",
+      "username": "admin",
+      "fullName": "super admin",
+      "password": "admin",
+      "email": "admin@mail.com",
+      "role": "admin",
       "id": 2
-    },
-    {
-      "username": "pikachu",
-      "fullName": "Dora Emon",
-      "password": "password",
-      "email": "doraemon@mail.com",
-      "id": 3
     }
   ],
   "products": [
     {
-      "productName": "iPhone 7 Plus",
+      "productName": "iPhone 7+",
       "price": 5000000,
       "category": "Phone",
       "image": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
@@ -34,7 +29,7 @@
     {
       "productName": "iPad Pro 3",
       "price": 15000000,
-      "category": "Tablet",
+      "category": "Tab",
       "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
       "desc": "HP Terbaikk loh ipad man",
       "id": 2
@@ -57,9 +52,26 @@
     },
     {
       "userId": 1,
+      "productId": 1,
+      "quantity": 2,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "productId": 2,
+      "quantity": 3,
+      "id": 7,
+      "productName": "iPad Pro 3",
+      "price": 15000000,
+      "category": "Tab",
+      "image": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
+      "desc": "HP Terbaikk loh ipad man"
+    },
+    {
+      "userId": 1,
       "productId": 3,
-      "quantity": 1,
-      "id": 4
+      "quantity": 2,
+      "id": 8
     }
   ]
 }
