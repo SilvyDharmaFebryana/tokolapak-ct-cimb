@@ -66,3 +66,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+### IDE PROJECT 
+- membuat aplikasi penyewaan lapangan olahraga, sekaligus menjual peralatan olahraga juga 
+- di dalam apk ini, terdapat beberapa pilihan lapangan yg akan di booking oleh user, misalnya :
+    * lapangan bola
+        dibagi lagi menjadi beberapa jenis lapangan 
+            * futsal 
+            * sepak bola 
+    * lapangan volly 
+    * lapangan basket 
+    * dll
+- user juga bisa sekaligus membeli peralatan olahraga, dari mulai pakaian sepatu dan lain lain 
