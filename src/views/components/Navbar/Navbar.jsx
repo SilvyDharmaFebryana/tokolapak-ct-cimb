@@ -16,7 +16,7 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import "./Navbar.css";
 import ButtonUI from "../Button/Button.tsx";
 import swal from 'sweetalert'
-import { logoutHandler } from '../../../redux/actions'
+import { logoutHandler, searchInputHandler } from '../../../redux/actions'
 
 const CircleBg = ({ children }) => {
   return <div className="circle-bg">{children}</div>;
@@ -25,7 +25,7 @@ const CircleBg = ({ children }) => {
 class Navbar extends React.Component {
   state = {
     searchBarIsFocused: false,
-    searcBarInput: "",
+    searchBarInput: "",
     dropdownOpen: false,
   };
 
@@ -35,6 +35,11 @@ class Navbar extends React.Component {
     this.props.logoutHandler()
     swal('anda akan keluar')
   }
+
+  // inputHandler = (event, field) => {
+  //   const { value } = event.target;
+  //   this.setState({ [field]: value });
+  // };
 
   showButtonLogout = () => {
     if (this.props.user.id) {
@@ -135,7 +140,13 @@ class Navbar extends React.Component {
             }`}
             type="text"
             placeholder="Cari produk impianmu disini"
+            onChange={(e) => this.props.onSearch(e.target.value)}
           />
+          {
+            console.log(this.props.search.searchInput)
+            
+          }
+
         </div>
         <div className="d-flex flex-row align-items-center">
 
@@ -152,12 +163,14 @@ class Navbar extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user
+    user: state.user,
+    search: state.search
   }
 }
 
 const mapDispatchToProps = { //connect function2
     logoutHandler,
+    onSearch: searchInputHandler,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

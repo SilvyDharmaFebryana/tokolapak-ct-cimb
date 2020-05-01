@@ -24,6 +24,7 @@ class AuthScreenNew extends React.Component {
             fullName: "",
             email: "",
             password: "",
+            address: "",
             role: "user",
             showPassword: false,
         },
@@ -45,11 +46,6 @@ class AuthScreenNew extends React.Component {
                 [field]: value,
             },
         });
-
-        // this.setState({ loginForm: {
-        //   ...this.state.loginForm,
-        //   [fieldYangDiganti]: value
-        // }})
     };
 
     registerBtnHandler = () => {
@@ -94,17 +90,17 @@ class AuthScreenNew extends React.Component {
                     <h3>Register</h3>
                     <p className="mt-4">
                         You will get the best recommendation for rent house in near of you
-                    </p>
-                    <TextField
-                        value={this.state.registerForm.username}
-                        onChange={(e) => this.inputHandler(e, "username", "registerForm")}
-                        placeholder="Username"
-                        className="mt-5"
-                    />
+                    </p>                  
                     <TextField
                         value={this.state.registerForm.fullName}
                         onChange={(e) => this.inputHandler(e, "fullName", "registerForm")}
                         placeholder="Name"
+                        className="mt-5"
+                    />
+                    <TextField
+                        value={this.state.registerForm.username}
+                        onChange={(e) => this.inputHandler(e, "username", "registerForm")}
+                        placeholder="Username"
                         className="mt-2"
                     />
                     <TextField
@@ -114,12 +110,19 @@ class AuthScreenNew extends React.Component {
                         className="mt-2"
                     />
                     <TextField
+                        value={this.state.registerForm.address}
+                        onChange={(e) => this.inputHandler(e, "address", "registerForm")}
+                        placeholder="Address"
+                        className="mt-2"
+                    />
+                    <TextField
                         value={this.state.registerForm.password}
                         onChange={(e) => this.inputHandler(e, "password", "registerForm")}
                         placeholder="Password"
                         className="mt-2"
                         type={this.state.registerForm.showPassword ? "text" : "password"}
                     />
+                    
                     <input 
                         type="checkbox" 
                         className="mt-3" 

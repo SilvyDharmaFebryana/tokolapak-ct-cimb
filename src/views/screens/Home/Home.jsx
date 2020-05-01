@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { Carousel, CarouselControl, CarouselItem } from "reactstrap";
 import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,7 +57,7 @@ class Home extends React.Component {
     tabList: [],
     desktopList: [],
     laptopList: [],
-    activeProduct: ""
+    activeCategory: ""
   };
 
   renderCarouselItems = () => {
@@ -116,8 +117,12 @@ class Home extends React.Component {
     this.setState({ activeIndex: prevIndex });
   };
 
-  getBestSellerProduct = () => {
-    Axios.get(`${API_URL}/products`)
+  getBestSellerProduct = (activeCategory = null) => {
+    Axios.get(`${API_URL}/products`, {
+      params: {
+        category: activeCategory
+      }
+    })
     .then((res) => {
         this.setState({ bestSellerProduct: res.data })
     })
@@ -127,37 +132,35 @@ class Home extends React.Component {
   }
 
   renderProducts = () => {
-    if ( this.state.activeProduct === "Phone" ){
+    if (this.state.activeCategory === "Phone" ){
         return this.state.phoneList.map((val) => {
-          return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+          return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
         })
-    } else if (this.state.activeProduct === "Tab") {
+    } else if (this.state.activeCategory === "Tab") {
       return this.state.tabList.map((val) => {
-        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+        return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
       })
-    } else if (this.state.activeProduct === "Laptop") {
+    } else if (this.state.activeCategory === "Laptop") {
       return this.state.laptopList.map((val) => {
-        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+        return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
       })
-    } else if (this.state.activeProduct === "Desktop") {
+    } else if (this.state.activeCategory === "Desktop") {
       return this.state.desktopList.map((val) => {
-        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
-      })
-    } else if (this.state.activeProduct === "Desktop") {
-      return this.state.bestSellerProduct.map((val) => {
-        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+        return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
       })
     } else {
       return this.state.bestSellerProduct.map((val) => {
-        return <ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} />
+        if (val.productName.toLowerCase().startsWith(this.props.search.searchInput.toLowerCase())){
+          return <Link to={`/product/${val.id}`} style={{ textDecoration: "none" ,color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        }
+        
       })
     }
-   
+    
   }
 
 
   componentDidMount() {
-
     this.getBestSellerProduct()
     this.getTabList()
     this.getDesktopList()
@@ -231,19 +234,19 @@ class Home extends React.Component {
       <div>
         <div className="d-flex justify-content-center flex-row align-items-center my-3">
           {/* <ButtonUI type="textual" onClick={() => this.setState({ activeProduct: "Phone" })}>Phone</ButtonUI> */}
-          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Phone" })}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeCategory: "Phone" })}>
             <h6 className="mx-4 font-weight-bold"> PHONE</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Laptop" })}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeCategory: "Laptop" })}>
             <h6 className="mx-4 font-weight-bold">LAPTOP</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Tab" })}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeCategory: "Tab" })}>
             <h6 className="mx-4 font-weight-bold">TAB</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "Desktop" })}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeCategory: "Desktop" })}>
             <h6 className="mx-4 font-weight-bold">DESKTOP</h6>
           </Link>
-          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeProduct: "All" })}>
+          <Link to="/" style={{ color: "inherit" }} onClick={() => this.setState({ activeCategory: "All" })}>
             <h6 className="mx-4 font-weight-bold">ALL BEST SELLER</h6>
           </Link>
         </div>
@@ -328,4 +331,14 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+
+
+const mapStateToProps = (state) => {
+  return {
+    search: state.search
+  }
+}
+
+
+
+export default connect(mapStateToProps )(Home);

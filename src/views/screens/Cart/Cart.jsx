@@ -18,6 +18,7 @@ class Cart extends React.Component {
             userId: "",
             fullName: "",
             address: "",
+            email: "",
             status: "pending",
             productList: [],
             subTotals: 0
@@ -50,13 +51,13 @@ class Cart extends React.Component {
                         subTotals: subTotal,
                         fullName: this.props.user.fullName,
                         address: this.props.user.address,
-                        userId: this.props.user.id
-                        
+                        userId: this.props.user.id,   
+                        email: this.props.user.email
                     }
                 })
 
                 console.log(this.state.transactionDetails.productList)
-                console.log(this.state.transactionDetails);
+                console.log(this.state.transactionDetails.email);
             })
             .catch((err) => {
                 console.log(err);
@@ -67,7 +68,6 @@ class Cart extends React.Component {
     deleteDataHandler = (id) => {
         Axios.delete(`${API_URL}/cart/${id}`)
             .then((res) => {
-                swal("success deleted", "", "success")
                 this.getDataHandler()
             })
             .catch((err) => {
@@ -125,11 +125,10 @@ class Cart extends React.Component {
         .then((res) => {
             console.log(res);
             this.state.transactionDetails.productList.map((val) => {
-
                 this.deleteDataHandler(val.id)
-                console.log(val.productId);
-                
+                console.log(val.productId);  
             })
+            swal("Transaction Success!", "Your transaction has been processed", "success")
         })
         .catch((err) => {
             console.log(err);
@@ -141,6 +140,13 @@ class Cart extends React.Component {
 
 
     render() {
+        const {
+            fullName,
+            address,
+            subTotals,
+            status,
+            email,
+        } = this.state.transactionDetails
 
         return (
             <div className="container">
@@ -205,19 +211,61 @@ class Cart extends React.Component {
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
-                                                            <td colSpan={4} className="text-center"> Total</td>
+                                                            <td colSpan={4} className="text-center"><h5>Total</h5></td>
                                                             <td>
-                                                                {
-                                                                    this.state.transactionDetails.subTotals
-                                                                }
+                                                                <h5>
+                                                                    {
+                                                                        new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(subTotals)
+                                                                    }
+                                                                </h5>                                                            
                                                             </td>
                                                         </tr>
                                                     </tfoot>
                                                 </Table>
                                             </div>
+
+                                            <div className="d-flex flex-row py-2 justify-content-center" style={{ backgroundColor: "#e6eeff" }}>
+                                                <h6 className="mt-1">Details</h6>
+                                            </div>
                                             <div>
+                                                <Table>
+                                                    <tr>
+                                                        <th>Delivery To</th>
+                                                        <td>:</td>
+                                                        <td>{fullName}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Address</th>
+                                                        <td>:</td>
+                                                        <td>{address}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Email</th>
+                                                        <td>:</td>
+                                                        <td>{email}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Total</th>
+                                                        <td>:</td>
+                                                        <td>
+                                                        {
+                                                            new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(subTotals)
+                                                        }
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Status</th>
+                                                        <td>:</td>
+                                                        <td>{status}</td>
+                                                    </tr>
+                                                    
+                                                </Table>
+                                            </div>
+
+                                            <div className="mt-4 d-flex flex-row-reverse">
                                                 <ButtonUI type="contained" onClick={this.confirmToPay}>Confirm to Pay</ButtonUI>
                                             </div>
+                                            
                                         </CardBody>
                                     </Card>
                                 </UncontrolledCollapse>
