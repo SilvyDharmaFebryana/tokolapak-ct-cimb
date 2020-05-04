@@ -14,22 +14,31 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/";
 class Cart extends React.Component {
 
     state = {
-        transactionDetails: {
+        transaction: {
             userId: "",
             fullName: "",
             address: "",
             email: "",
             status: "pending",
-            productList: [],
-            subTotals: 0
+            subTotals: 0,
+            startDate: "",
+            endDate: "",
+            totalItems: "",
+            paymentMethod: "Transfer Bank",
+            productList: []
         },
+        totalItems: 0,
+        itemPrice: 0,
+        itemQuantity: "",
+        transactionId: "",
+        itemName: "",
         listProductCart: [],
+        checkoutItems: []
     };
 
     getDataHandler = () => {
-
         let subTotal = 0
-
+        let totalQty = 0
         Axios.get(`${API_URL}/cart`, {
             params: {
                 userId: this.props.user.id,
@@ -37,27 +46,27 @@ class Cart extends React.Component {
             }
         })
             .then((res) => {
-
                 res.data.map((val) => {
                     const { quantity, product } = val;
                     const { price } = product;
                     subTotal += quantity * price
+                    totalQty += quantity
                 })
-
                 this.setState({
-                    transactionDetails: {
-                        ...this.state.transactionDetails,
-                        productList: res.data,
+                    transaction: {
+                        ...this.state.transaction,
                         subTotals: subTotal,
+                        productList: res.data,
                         fullName: this.props.user.fullName,
                         address: this.props.user.address,
-                        userId: this.props.user.id,   
-                        email: this.props.user.email
-                    }
+                        userId: this.props.user.id,
+                        email: this.props.user.email,
+                        startDate: new Date().toLocaleString(),
+                        totalItems: totalQty,
+                    },
+                    listProductCart: res.data
                 })
 
-                console.log(this.state.transactionDetails.productList)
-                console.log(this.state.transactionDetails.email);
             })
             .catch((err) => {
                 console.log(err);
@@ -77,13 +86,29 @@ class Cart extends React.Component {
 
     componentDidMount() {
         this.getDataHandler()
+
+    }
+
+    checkoutHandlder = (e, idx) => {
+        const { checked } = e.target
+        if (checked) {
+            this.setState({ checkoutItems: [...this.state.checkoutItems, idx] })
+            console.log(this.state.checkoutItems);
+
+        } else {
+            this.setState({
+                checkoutItems: [
+                    ...this.state.checkoutItem.filter((val) => val !== idx)]
+            })
+        }
     }
 
     renderCartData = () => {
-        const { productList } = this.state.transactionDetails
-        return productList.map((val, idx) => {
+        const { listProductCart } = this.state
+        return listProductCart.map((val, idx) => {
             return (
                 <tr>
+                    <td><input type="checkbox" onChange={(e) => this.checkoutHandlder(e, idx)} /></td>
                     <td> {idx + 1} </td>
                     <td style={{ width: "30%" }}><img className="justify-content-center" style={{ width: "10%" }} src={val.product.image} alt="" /></td>
                     <td> {val.product.productName} </td>
@@ -100,9 +125,9 @@ class Cart extends React.Component {
     };
 
     checkoutHandlder = () => {
-        const { productList } = this.state.transactionDetails
-        return productList.map((val, idx) => {
-            const { quantity, product } = val;
+        const { listProductCart } = this.state
+        return listProductCart.map((val, idx) => {
+            const { quantity, product, startDate } = val;
             const { productName, price } = product;
             const prices = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(price)
             const totals = quantity * price
@@ -113,29 +138,61 @@ class Cart extends React.Component {
                     <td>{quantity}</td>
                     <td>{prices}</td>
                     <td>{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(totals)}</td>
+                    <td>{startDate}</td>
                 </tr>
             )
         })
     }
 
-
     confirmToPay = () => {
+        Axios.get(`${API_URL}/cart`, {
+            params: {
+                userId: this.props.user.id,
+                _expand: "product"
+            }
+        })
+            .then((res) => {
+                    Axios.post(`${API_URL}/transactions`, this.state.transaction)
+                        .then((res) => {
+                            this.state.listProductCart.map((val) => {
+                                this.deleteDataHandler(val.id)
+                                Axios.post(`${API_URL}/transactionsDetails`, {
+                                    transactionId: res.data.id,
+                                    itemPrice: val.product.price,
+                                    itemQuantity: val.quantity,
+                                    itemName: val.product.productName,
+                                    totalItems: val.product.price * val.quantity
+                                })
+                                    .then((res) => {
+                                        console.log(res.data)
+                                    })
+                                    .catch((err) => {
+                                        console.log(err);
+                                    })
+                            })
+                            swal("Transaction Success!", "Your transaction has been processed", "success")
+                        })
+                        .catch((err) => {
+                            console.log(err);
 
-        Axios.post(`${API_URL}/transactions`, this.state.transactionDetails)
-        .then((res) => {
-            console.log(res);
-            this.state.transactionDetails.productList.map((val) => {
-                this.deleteDataHandler(val.id)
-                console.log(val.productId);  
+                        })
+                
             })
-            swal("Transaction Success!", "Your transaction has been processed", "success")
-        })
-        .catch((err) => {
-            console.log(err);
-            
-        })
+            .catch((err) => {
+                console.log(err);
+            })
+      
     }
 
+    inputHandler = (e, field, form) => {
+        let { value } = e.target;
+        this.setState({
+            [form]: {
+                ...this.state[form],
+                [field]: value,
+            },
+        });
+    };
 
 
 
@@ -146,19 +203,22 @@ class Cart extends React.Component {
             subTotals,
             status,
             email,
-        } = this.state.transactionDetails
+            startDate,
+            totalItems,
+        } = this.state.transaction
 
         return (
             <div className="container">
                 {
-                    this.state.transactionDetails.productList.length == 0 ? (
+                    this.state.listProductCart.length == 0 ? (
                         <Alert color="primary" className="mt-4">Your cart is empty! <Link to="/">Go Shopping</Link></Alert>
                     ) :
                         <>
                             <center>
-                                <Table className="table table-striped" style={{ width: "80%" }} >
+                                <Table className="table-striped" style={{ width: "80%" }} >
                                     <thead>
                                         <tr>
+                                            <th scope="col"></th>
                                             <th scope="col">No</th>
                                             <th scope="col">Product</th>
                                             <th scope="col">Product Name</th>
@@ -217,7 +277,7 @@ class Cart extends React.Component {
                                                                     {
                                                                         new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(subTotals)
                                                                     }
-                                                                </h5>                                                            
+                                                                </h5>
                                                             </td>
                                                         </tr>
                                                     </tfoot>
@@ -245,12 +305,17 @@ class Cart extends React.Component {
                                                         <td>{email}</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>Total</th>
+                                                        <th>Total of Items</th>
+                                                        <td>:</td>
+                                                        <td>{totalItems}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Total Price</th>
                                                         <td>:</td>
                                                         <td>
-                                                        {
-                                                            new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(subTotals)
-                                                        }
+                                                            {
+                                                                new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(subTotals)
+                                                            }
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -258,14 +323,35 @@ class Cart extends React.Component {
                                                         <td>:</td>
                                                         <td>{status}</td>
                                                     </tr>
-                                                    
+                                                    <tr>
+                                                        <th>Date of Payment</th>
+                                                        <td>:</td>
+                                                        <td>{startDate}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Payment Method</th>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <select
+                                                            value={this.state.transaction.paymentMethod}
+                                                            className="custom-text-input h-100 pl-3"
+                                                            onChange={(e) => this.inputHandler(e, "paymentMethod", "transaction")}
+                                                            >
+                                                                <option value="Transfer Bank">Transfer Bank</option>
+                                                                <option value="Indomart">Indomart</option>
+                                                                <option value="Alfamart">Alfamart</option>
+                                                                <option value="Credit Card">Credit Card</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+
                                                 </Table>
                                             </div>
 
                                             <div className="mt-4 d-flex flex-row-reverse">
                                                 <ButtonUI type="contained" onClick={this.confirmToPay}>Confirm to Pay</ButtonUI>
                                             </div>
-                                            
+
                                         </CardBody>
                                     </Card>
                                 </UncontrolledCollapse>
@@ -286,3 +372,60 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(Cart)
 
+
+
+// postTransactionHandler = () => {
+//     Axios.get(`${API_URL}/carts`, {
+//         params: {
+//             userId: this.props.user.id,
+//             _expand: "product",
+//         },
+//     })
+//         .then((res) => {
+//             res.data.map(val => {
+//                 { this.deletedata(val.id) }
+//                 this.setState({
+//                     productId: val.product.id,
+//                     price: val.product.price,
+//                     quantity: val.quantity,
+//                     totalPriceProduct: val.quantity * val.product.price,
+//                     productName: val.product.productName
+//                 })
+//             })
+//             console.log(res.data);
+//             Axios.post(`${API_URL}/transactions`, {
+//                 userId: this.props.user.id,
+//                 totalprice: this.state.subTotalFix,
+//                 status: this.state.status,
+//                 tgl_selesai: this.state.tgl_selesai,
+//                 tgl_belanja: this.state.tgl_belanja,
+//                 pengiriman: this.props.user.address,
+//                 metodePembayaran: this.state.metodePembayaran,
+//             })
+//                 .then((res) => {
+//                     this.setState({ listProductCart: "" })
+//                     Axios.post(`${API_URL}/transactionDetail`, {
+//                         transactionId: res.data.id,
+//                         productId: this.state.productId,
+//                         price: this.state.price,
+//                         quantity: this.state.quantity,
+//                         totalPriceProduct: this.state.totalPriceProduct,
+//                         productName: this.state.productName,
+//                     })
+//                         .then((res) => {
+//                             console.log(res);
+//                         })
+//                         .catch((err) => {
+//                             console.log(err);
+//                         })
+//                     console.log(res);
+//                     swal("Sukses", "Please check your history transaction", "success")
+//                 })
+//                 .catch((err) => {
+//                     console.log(err);
+//                 })
+//         })
+//         .catch((err) => {
+//             console.log(err);
+//         })
+// }

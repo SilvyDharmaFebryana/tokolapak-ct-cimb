@@ -150,10 +150,9 @@ class Home extends React.Component {
       })
     } else {
       return this.state.bestSellerProduct.map((val) => {
-        if (val.productName.toLowerCase().startsWith(this.props.search.searchInput.toLowerCase())){
+        if (val.productName.toLowerCase().includes(this.props.search.searchInput.toLowerCase())){
           return <Link to={`/product/${val.id}`} style={{ textDecoration: "none" ,color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
-        }
-        
+        }    
       })
     }
     
@@ -341,4 +340,4 @@ const mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps )(Home);
+export default connect(mapStateToProps)(Home);

@@ -7,6 +7,7 @@ import Axios from 'axios'
 import { API_URL } from "../../../constants/API";
 import swal from 'sweetalert'
 import { throwStatement } from '@babel/types'
+import { Redirect } from "react-router-dom";
 
 
 class ProductDetails extends React.Component {
@@ -88,6 +89,11 @@ class ProductDetails extends React.Component {
         this.getProductData()
     }
     
+
+    addToCartAlert = () => {
+        swal('anda harus login!')
+        // return <Redirect to="/auth" />
+    }
     
     render() {
 
@@ -120,11 +126,20 @@ class ProductDetails extends React.Component {
                             {desc}
                         </p>
                         {/* <TextField type="number" placeholder="Quantity" className="mt-3" /> */}
-                        <div className="d-flex flex-row mt-4">
-                            <ButtonUI type="contained" onClick={this.addToCartHandler}>Add to cart</ButtonUI>
-                            <ButtonUI className="ml-4" type="outlined">Add to wishlist</ButtonUI>
-                           
-                        </div>
+                        {
+                            this.props.user.id > 0 ? (
+                                <div className="d-flex flex-row mt-4">
+                                    <ButtonUI type="contained" onClick={this.addToCartHandler}>Add to cart</ButtonUI>
+                                    <ButtonUI className="ml-4" type="outlined">Add to wishlist</ButtonUI>
+
+                                </div>
+                            ) : <div className="d-flex flex-row mt-4">
+                                    <ButtonUI type="contained" onClick={this.addToCartAlert}>Add to cart</ButtonUI>
+                                    <ButtonUI className="ml-4" type="outlined">Add to wishlist</ButtonUI>
+
+                                </div>
+                        }
+                       
                     </div>
                 </div>
             </div>
