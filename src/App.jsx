@@ -37,44 +37,66 @@ class App extends React.Component {
     }, 1000);
   }
 
-  renderAdminRoutes = () => {
-    if (this.props.user.role === "admin") {
-      return <Route exact path="/admin/dashboard" component={AdminDashboard} />;
-    } else if (this.props.user.role === "user") {
-      return <Route path="/admin/dashboard" component={PageNotFound} />
-    } else if (this.props.user.role === "user") {
-      return <Route path="/admin/payment" component={PageNotFound} />
-    } else if (this.props.user.role === "user") {
-      return <Route path="/admin/member" component={PageNotFound} />
-    } else if (this.props.user.role === "user") {
-      return <Route path="/admin/report" component={PageNotFound} />
-    } else {
-      return <Route path="/" component={Home} />
-    }
-  };
+  // renderAdminRoutes = () => {
+  //   if (this.props.user.role === "admin") {
+  //     return <Route exact path="/admin/dashboard" component={AdminDashboard} />;
+  //   } else if (this.props.user.role === "user") {
+  //     return <Route path="/admin/dashboard" component={PageNotFound} />
+  //   } else if (this.props.user.role === "user") {
+  //     return <Route path="/admin/payment" component={PageNotFound} />
+  //   } else if (this.props.user.role === "user") {
+  //     return <Route path="/admin/member" component={PageNotFound} />
+  //   } else if (this.props.user.role === "user") {
+  //     return <Route path="/admin/report" component={PageNotFound} />
+  //   } else {
+  //     return <Route path="/" component={Home} />
+  //   }
+  // };
 
   render() {
     if (this.props.user.cookieChecked) { // ini cek apakah sudah ada isi 
-      console.log(this.props.user.id)
-      return (
-        <>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/auth" component={AuthScreenNew} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/admin/member" component={AdminMember} />
-            <Route exact path="/admin/payment" component={AdminPayment} />
-            <Route exact path="/admin/report" component={AdminReport} />
+      if ( this.props.user.role === "admin") {
+        return (
+          <>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/auth" component={AuthScreenNew} />
+              <Route exact path="/admin/dashboard" component={AdminDashboard} />
+              <Route exact path="/admin/member" component={AdminMember} />
+              <Route exact path="/admin/payment" component={AdminPayment} />
+              <Route exact path="/admin/report" component={AdminReport} />
 
-            <Route exact path="/history" component={History} />
-            <Route exact path="/wishlist" component={Wishlist} />
-            {this.renderAdminRoutes()}
-            <Route exact path="/product/:productId" component={ProductDetails} />
-          </Switch>
-          <div style={{ height: "120px" }} />
-        </>
-      );
+              {/* <Route exact path="/history" component={History} />
+              <Route exact path="/wishlist" component={Wishlist} />
+              {this.renderAdminRoutes()}
+              <Route exact path="/product/:productId" component={ProductDetails} /> */}
+            </Switch>
+            <div style={{ height: "120px" }} />
+          </>
+        )
+      } else {
+        return (
+          <>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/auth" component={AuthScreenNew} />
+              <Route exact path="/cart" component={Cart} />
+              <Route exact path="/admin/dashboard" component={PageNotFound} />
+              <Route exact path="/admin/member" component={PageNotFound} />
+              <Route exact path="/admin/payment" component={PageNotFound} />
+              <Route exact path="/admin/report" component={PageNotFound} />
+              <Route exact path="/history" component={History} />
+              <Route exact path="/wishlist" component={Wishlist} />
+              {/* {this.renderAdminRoutes()} */}
+              <Route exact path="/product/:productId" component={ProductDetails} />
+            </Switch>
+            <div style={{ height: "120px" }} />
+          </>
+        );
+      }
+      // console.log(this.props.user.id)
     } else {
       return <div>Loading ...</div>
     }

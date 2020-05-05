@@ -45,6 +45,14 @@
       "role": "user",
       "showPassword": true,
       "id": 6
+    },
+    {
+      "username": "beni_sapi",
+      "fullName": "beni si sapi",
+      "password": "111",
+      "email": "beni@dora.com",
+      "role": "user",
+      "id": 7
     }
   ],
   "products": [
@@ -886,6 +894,21 @@
       "deliveryFee": 0,
       "grandTotals": 26000000,
       "id": 4
+    },
+    {
+      "userId": 7,
+      "fullName": "beni si sapi",
+      "email": "beni@dora.com",
+      "status": "pending",
+      "subTotals": 49500000,
+      "startDate": "5/5/2020, 6:26:25 PM",
+      "endDate": "",
+      "totalItems": 3,
+      "paymentMethod": "Transfer Bank",
+      "deliveryCourier": "express",
+      "deliveryFee": 20000,
+      "grandTotals": 49520000,
+      "id": 5
     }
   ],
   "transactionsDetails": [
@@ -951,6 +974,42 @@
       "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
       "totalItems": 6000000,
       "id": 7
+    },
+    {
+      "transactionId": 5,
+      "itemPrice": 20000000,
+      "itemQuantity": 1,
+      "itemName": "Macbook Pro",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+      "totalItems": 20000000,
+      "id": 8
+    },
+    {
+      "transactionId": 5,
+      "itemPrice": "24000000",
+      "itemQuantity": 1,
+      "itemName": "iPhone 11 Pro Max",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "totalItems": 24000000,
+      "id": 9
+    },
+    {
+      "transactionId": 5,
+      "itemPrice": "5500000",
+      "itemQuantity": 1,
+      "itemName": "iPhone 7 Plus",
+      "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+      "totalItems": 5500000,
+      "id": 10
+    },
+    {
+      "transactionId": 5,
+      "itemPrice": "24000000",
+      "itemQuantity": 1,
+      "itemName": "iPhone 11 Pro Max",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "totalItems": 24000000,
+      "id": 11
     }
   ]
 }
