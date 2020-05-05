@@ -44,7 +44,6 @@ class AdminReport extends React.Component {
             .catch((err) => {
                 console.log(err);
             });
-
     }
 
 
@@ -109,38 +108,39 @@ class AdminReport extends React.Component {
     }
 
     renderProductList = () => {
-        const { productList } = this.state
 
-        return productList.map((val) => {
+        // const { productList } = this.state
 
-            const { productName, id } = val
-            const { productYangDiList } = this.state
-            let allTotalQuantity = 0
+        // return productList.map((val) => {
 
-            productYangDiList.map((value) => {
-                value.transactionsDetails.map((values) => {
-                    if( value.status === "approved" ) {
-                        if (values.itemId === id) {
-                            allTotalQuantity += values.itemQuantity
-                        }
-                    }
-                })
-            })
+        //     const { productName, id } = val
+        //     const { productYangDiList } = this.state
+        //     let allTotalQuantity = 0
 
-            return (
-                <tr>
-                    <td>{id}</td>
-                    <td>{productName}</td>
-                    <td>
-                    {
-                        allTotalQuantity > 0 ? (
-                            <b>{allTotalQuantity} pcs</b>
-                        ) : <p style={{color: "red", fontWeight: "100px"}}>belum ada history</p>
-                    }
-                    </td>
-                </tr>
-            )
-        })
+        //     productYangDiList.map((value) => {
+        //         value.transactionsDetails.map((values) => {
+        //             if( value.status === "approved" ) {
+        //                 if (values.itemId === id) {
+        //                     allTotalQuantity += values.itemQuantity
+        //                 }
+        //             }
+        //         })
+        //     })
+
+        //     return (
+        //         <tr>
+        //             <td>{id}</td>
+        //             <td>{productName}</td>
+        //             <td>
+        //             {
+        //                 allTotalQuantity > 0 ? (
+        //                     <b>{allTotalQuantity} pcs</b>
+        //                 ) : <p style={{color: "red", fontWeight: "100px"}}>belum ada history</p>
+        //             }
+        //             </td>
+        //         </tr>
+        //     )
+        // })
     }
 
 
