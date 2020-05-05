@@ -162,6 +162,7 @@ class Cart extends React.Component {
                                 this.deleteDataHandler(val.id)
                                 Axios.post(`${API_URL}/transactionsDetails`, {
                                     transactionId: res.data.id,
+                                    itemId: val.product.id,
                                     itemPrice: val.product.price,
                                     itemQuantity: val.quantity,
                                     itemName: val.product.productName,

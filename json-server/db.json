@@ -136,69 +136,235 @@
         "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
         "email": "gp@mail.com",
         "status": "pending",
-        "subTotals": 46000000,
-        "startDate": "5/5/2020, 3:53:32 PM",
+        "subTotals": 64000000,
+        "startDate": "5/5/2020, 10:35:39 PM",
         "endDate": "",
-        "totalItems": 2,
+        "totalItems": 3,
         "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "sameday",
-        "deliveryFee": 50000,
-        "grandTotals": 46050000,
+        "deliveryCourier": "express",
+        "deliveryFee": 20000,
+        "grandTotals": 64020000,
         "id": 1,
         "transactionsDetails": [
           {
             "transactionId": 1,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 1
+          },
+          {
+            "transactionId": 1,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 2
+          }
+        ]
+      },
+      "1": {
+        "userId": 6,
+        "fullName": "Gabriel Ilham",
+        "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+        "email": "gp@mail.com",
+        "status": "pending",
+        "subTotals": 51500000,
+        "startDate": "5/5/2020, 10:37:11 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 51550000,
+        "id": 2,
+        "transactionsDetails": [
+          {
+            "transactionId": 2,
+            "itemId": 4,
             "itemPrice": "23000000",
             "itemQuantity": 2,
             "itemName": "iMac (2019)",
             "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
             "totalItems": 46000000,
-            "id": 1
-          }
-        ]
-      },
-      "1": {
-        "userId": 4,
-        "fullName": "Silvy febryana",
-        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-        "email": "fbryn@gmail.com",
-        "status": "pending",
-        "subTotals": 20500000,
-        "startDate": "5/5/2020, 3:53:58 PM",
-        "endDate": "",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "express",
-        "deliveryFee": 20000,
-        "grandTotals": 20520000,
-        "id": 2,
-        "transactionsDetails": [
-          {
-            "transactionId": 2,
-            "itemPrice": 15000000,
-            "itemQuantity": 1,
-            "itemName": "iPad Pro 3",
-            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-            "totalItems": 15000000,
-            "id": 2
-          },
-          {
-            "transactionId": 2,
-            "itemPrice": "5500000",
-            "itemQuantity": 1,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 5500000,
             "id": 3
           },
           {
             "transactionId": 2,
+            "itemId": 1,
             "itemPrice": "5500000",
             "itemQuantity": 1,
             "itemName": "iPhone 7 Plus",
             "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
             "totalItems": 5500000,
             "id": 4
+          },
+          {
+            "transactionId": 2,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 5
+          }
+        ]
+      },
+      "2": {
+        "userId": 4,
+        "fullName": "Silvy febryana",
+        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+        "email": "fbryn@gmail.com",
+        "status": "pending",
+        "subTotals": 31500000,
+        "startDate": "5/5/2020, 10:38:55 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "economy",
+        "deliveryFee": 0,
+        "grandTotals": 31500000,
+        "id": 3,
+        "transactionsDetails": [
+          {
+            "transactionId": 3,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 1,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 20000000,
+            "id": 6
+          },
+          {
+            "transactionId": 3,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 7
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 8
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 9
+          }
+        ]
+      },
+      "3": {
+        "userId": 4,
+        "fullName": "Silvy febryana",
+        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+        "email": "fbryn@gmail.com",
+        "status": "pending",
+        "subTotals": 48000000,
+        "startDate": "5/5/2020, 10:40:11 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 48050000,
+        "id": 4,
+        "transactionsDetails": [
+          {
+            "transactionId": 4,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 2,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 48000000,
+            "id": 10
+          }
+        ]
+      },
+      "4": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 40000000,
+        "startDate": "5/5/2020, 10:40:39 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "instant",
+        "deliveryFee": 100000,
+        "grandTotals": 40100000,
+        "id": 5,
+        "transactionsDetails": [
+          {
+            "transactionId": 5,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 11
+          }
+        ]
+      },
+      "5": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 30000000,
+        "startDate": "5/5/2020, 10:40:52 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 30050000,
+        "id": 6,
+        "transactionsDetails": [
+          {
+            "transactionId": 6,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 12
+          },
+          {
+            "transactionId": 6,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 13
           }
         ]
       },
@@ -207,318 +373,116 @@
       "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
       "email": "gp@mail.com",
       "status": "approved",
-      "subTotals": 46000000,
-      "startDate": "5/5/2020, 3:53:32 PM",
-      "endDate": "5/5/2020, 3:54:22 PM",
-      "totalItems": 2,
-      "paymentMethod": "Transfer Bank",
-      "deliveryCourier": "sameday",
-      "deliveryFee": 50000,
-      "grandTotals": 46050000,
-      "id": 1
-    },
-    {
-      "0": {
-        "userId": 6,
-        "fullName": "Gabriel Ilham",
-        "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
-        "email": "gp@mail.com",
-        "status": "pending",
-        "subTotals": 46000000,
-        "startDate": "5/5/2020, 3:53:32 PM",
-        "endDate": "",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "sameday",
-        "deliveryFee": 50000,
-        "grandTotals": 46050000,
-        "id": 1,
-        "transactionsDetails": [
-          {
-            "transactionId": 1,
-            "itemPrice": "23000000",
-            "itemQuantity": 2,
-            "itemName": "iMac (2019)",
-            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
-            "totalItems": 46000000,
-            "id": 1
-          }
-        ]
-      },
-      "1": {
-        "userId": 4,
-        "fullName": "Silvy febryana",
-        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-        "email": "fbryn@gmail.com",
-        "status": "pending",
-        "subTotals": 20500000,
-        "startDate": "5/5/2020, 3:53:58 PM",
-        "endDate": "",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "express",
-        "deliveryFee": 20000,
-        "grandTotals": 20520000,
-        "id": 2,
-        "transactionsDetails": [
-          {
-            "transactionId": 2,
-            "itemPrice": 15000000,
-            "itemQuantity": 1,
-            "itemName": "iPad Pro 3",
-            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-            "totalItems": 15000000,
-            "id": 2
-          },
-          {
-            "transactionId": 2,
-            "itemPrice": "5500000",
-            "itemQuantity": 1,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 5500000,
-            "id": 3
-          },
-          {
-            "transactionId": 2,
-            "itemPrice": "5500000",
-            "itemQuantity": 1,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 5500000,
-            "id": 4
-          }
-        ]
-      },
-      "userId": 4,
-      "fullName": "Silvy febryana",
-      "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-      "email": "fbryn@gmail.com",
-      "status": "approved",
-      "subTotals": 20500000,
-      "startDate": "5/5/2020, 3:53:58 PM",
-      "endDate": "5/5/2020, 3:54:25 PM",
-      "totalItems": 2,
+      "subTotals": 64000000,
+      "startDate": "5/5/2020, 10:35:39 PM",
+      "endDate": "5/5/2020, 10:41:29 PM",
+      "totalItems": 3,
       "paymentMethod": "Transfer Bank",
       "deliveryCourier": "express",
       "deliveryFee": 20000,
-      "grandTotals": 20520000,
+      "grandTotals": 64020000,
+      "id": 1
+    },
+    {
+      "userId": 6,
+      "fullName": "Gabriel Ilham",
+      "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+      "email": "gp@mail.com",
+      "status": "pending",
+      "subTotals": 51500000,
+      "startDate": "5/5/2020, 10:37:11 PM",
+      "endDate": "",
+      "totalItems": 3,
+      "paymentMethod": "Transfer Bank",
+      "deliveryCourier": "sameday",
+      "deliveryFee": 50000,
+      "grandTotals": 51550000,
       "id": 2
     },
     {
       "0": {
-        "0": {
-          "userId": 6,
-          "fullName": "Gabriel Ilham",
-          "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
-          "email": "gp@mail.com",
-          "status": "pending",
-          "subTotals": 46000000,
-          "startDate": "5/5/2020, 3:53:32 PM",
-          "endDate": "",
-          "totalItems": 2,
-          "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "sameday",
-          "deliveryFee": 50000,
-          "grandTotals": 46050000,
-          "id": 1,
-          "transactionsDetails": [
-            {
-              "transactionId": 1,
-              "itemPrice": "23000000",
-              "itemQuantity": 2,
-              "itemName": "iMac (2019)",
-              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
-              "totalItems": 46000000,
-              "id": 1
-            }
-          ]
-        },
-        "1": {
-          "userId": 4,
-          "fullName": "Silvy febryana",
-          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-          "email": "fbryn@gmail.com",
-          "status": "pending",
-          "subTotals": 20500000,
-          "startDate": "5/5/2020, 3:53:58 PM",
-          "endDate": "",
-          "totalItems": 2,
-          "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "express",
-          "deliveryFee": 20000,
-          "grandTotals": 20520000,
-          "id": 2,
-          "transactionsDetails": [
-            {
-              "transactionId": 2,
-              "itemPrice": 15000000,
-              "itemQuantity": 1,
-              "itemName": "iPad Pro 3",
-              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-              "totalItems": 15000000,
-              "id": 2
-            },
-            {
-              "transactionId": 2,
-              "itemPrice": "5500000",
-              "itemQuantity": 1,
-              "itemName": "iPhone 7 Plus",
-              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-              "totalItems": 5500000,
-              "id": 3
-            },
-            {
-              "transactionId": 2,
-              "itemPrice": "5500000",
-              "itemQuantity": 1,
-              "itemName": "iPhone 7 Plus",
-              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-              "totalItems": 5500000,
-              "id": 4
-            }
-          ]
-        },
         "userId": 6,
         "fullName": "Gabriel Ilham",
         "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
         "email": "gp@mail.com",
-        "status": "approved",
-        "subTotals": 46000000,
-        "startDate": "5/5/2020, 3:53:32 PM",
-        "endDate": "5/5/2020, 3:54:22 PM",
-        "totalItems": 2,
+        "status": "pending",
+        "subTotals": 64000000,
+        "startDate": "5/5/2020, 10:35:39 PM",
+        "endDate": "",
+        "totalItems": 3,
         "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "sameday",
-        "deliveryFee": 50000,
-        "grandTotals": 46050000,
+        "deliveryCourier": "express",
+        "deliveryFee": 20000,
+        "grandTotals": 64020000,
         "id": 1,
         "transactionsDetails": [
           {
             "transactionId": 1,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 1
+          },
+          {
+            "transactionId": 1,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 2
+          }
+        ]
+      },
+      "1": {
+        "userId": 6,
+        "fullName": "Gabriel Ilham",
+        "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+        "email": "gp@mail.com",
+        "status": "pending",
+        "subTotals": 51500000,
+        "startDate": "5/5/2020, 10:37:11 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 51550000,
+        "id": 2,
+        "transactionsDetails": [
+          {
+            "transactionId": 2,
+            "itemId": 4,
             "itemPrice": "23000000",
             "itemQuantity": 2,
             "itemName": "iMac (2019)",
             "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
             "totalItems": 46000000,
-            "id": 1
-          }
-        ]
-      },
-      "1": {
-        "0": {
-          "userId": 6,
-          "fullName": "Gabriel Ilham",
-          "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
-          "email": "gp@mail.com",
-          "status": "pending",
-          "subTotals": 46000000,
-          "startDate": "5/5/2020, 3:53:32 PM",
-          "endDate": "",
-          "totalItems": 2,
-          "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "sameday",
-          "deliveryFee": 50000,
-          "grandTotals": 46050000,
-          "id": 1,
-          "transactionsDetails": [
-            {
-              "transactionId": 1,
-              "itemPrice": "23000000",
-              "itemQuantity": 2,
-              "itemName": "iMac (2019)",
-              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
-              "totalItems": 46000000,
-              "id": 1
-            }
-          ]
-        },
-        "1": {
-          "userId": 4,
-          "fullName": "Silvy febryana",
-          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-          "email": "fbryn@gmail.com",
-          "status": "pending",
-          "subTotals": 20500000,
-          "startDate": "5/5/2020, 3:53:58 PM",
-          "endDate": "",
-          "totalItems": 2,
-          "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "express",
-          "deliveryFee": 20000,
-          "grandTotals": 20520000,
-          "id": 2,
-          "transactionsDetails": [
-            {
-              "transactionId": 2,
-              "itemPrice": 15000000,
-              "itemQuantity": 1,
-              "itemName": "iPad Pro 3",
-              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-              "totalItems": 15000000,
-              "id": 2
-            },
-            {
-              "transactionId": 2,
-              "itemPrice": "5500000",
-              "itemQuantity": 1,
-              "itemName": "iPhone 7 Plus",
-              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-              "totalItems": 5500000,
-              "id": 3
-            },
-            {
-              "transactionId": 2,
-              "itemPrice": "5500000",
-              "itemQuantity": 1,
-              "itemName": "iPhone 7 Plus",
-              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-              "totalItems": 5500000,
-              "id": 4
-            }
-          ]
-        },
-        "userId": 4,
-        "fullName": "Silvy febryana",
-        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-        "email": "fbryn@gmail.com",
-        "status": "approved",
-        "subTotals": 20500000,
-        "startDate": "5/5/2020, 3:53:58 PM",
-        "endDate": "5/5/2020, 3:54:25 PM",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "express",
-        "deliveryFee": 20000,
-        "grandTotals": 20520000,
-        "id": 2,
-        "transactionsDetails": [
-          {
-            "transactionId": 2,
-            "itemPrice": 15000000,
-            "itemQuantity": 1,
-            "itemName": "iPad Pro 3",
-            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-            "totalItems": 15000000,
-            "id": 2
-          },
-          {
-            "transactionId": 2,
-            "itemPrice": "5500000",
-            "itemQuantity": 1,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 5500000,
             "id": 3
           },
           {
             "transactionId": 2,
+            "itemId": 1,
             "itemPrice": "5500000",
             "itemQuantity": 1,
             "itemName": "iPhone 7 Plus",
             "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
             "totalItems": 5500000,
             "id": 4
+          },
+          {
+            "transactionId": 2,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 5
           }
         ]
       },
@@ -528,45 +492,19 @@
         "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
         "email": "fbryn@gmail.com",
         "status": "pending",
-        "subTotals": 11000000,
-        "startDate": "5/5/2020, 4:02:51 PM",
+        "subTotals": 31500000,
+        "startDate": "5/5/2020, 10:38:55 PM",
         "endDate": "",
-        "totalItems": 2,
+        "totalItems": 3,
         "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "express",
-        "deliveryFee": 20000,
-        "grandTotals": 11020000,
+        "deliveryCourier": "economy",
+        "deliveryFee": 0,
+        "grandTotals": 31500000,
         "id": 3,
         "transactionsDetails": [
           {
             "transactionId": 3,
-            "itemPrice": "5500000",
-            "itemQuantity": 2,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 11000000,
-            "id": 5
-          }
-        ]
-      },
-      "3": {
-        "userId": 1,
-        "fullName": "silvy dharma febryana",
-        "address": "jl. terusan sarijadi no 52,\nkota bandung",
-        "email": "silvysilvy@mail.com",
-        "status": "pending",
-        "subTotals": 26000000,
-        "startDate": "5/5/2020, 4:03:35 PM",
-        "endDate": "",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "economy",
-        "deliveryFee": 0,
-        "grandTotals": 26000000,
-        "id": 4,
-        "transactionsDetails": [
-          {
-            "transactionId": 4,
+            "itemId": 3,
             "itemPrice": 20000000,
             "itemQuantity": 1,
             "itemName": "Macbook Pro",
@@ -575,13 +513,128 @@
             "id": 6
           },
           {
-            "transactionId": 4,
+            "transactionId": 3,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 7
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
             "itemPrice": "6000000",
             "itemQuantity": 1,
             "itemName": "iPad 7 ",
             "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
             "totalItems": 6000000,
-            "id": 7
+            "id": 8
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 9
+          }
+        ]
+      },
+      "3": {
+        "userId": 4,
+        "fullName": "Silvy febryana",
+        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+        "email": "fbryn@gmail.com",
+        "status": "pending",
+        "subTotals": 48000000,
+        "startDate": "5/5/2020, 10:40:11 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 48050000,
+        "id": 4,
+        "transactionsDetails": [
+          {
+            "transactionId": 4,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 2,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 48000000,
+            "id": 10
+          }
+        ]
+      },
+      "4": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 40000000,
+        "startDate": "5/5/2020, 10:40:39 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "instant",
+        "deliveryFee": 100000,
+        "grandTotals": 40100000,
+        "id": 5,
+        "transactionsDetails": [
+          {
+            "transactionId": 5,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 11
+          }
+        ]
+      },
+      "5": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 30000000,
+        "startDate": "5/5/2020, 10:40:52 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 30050000,
+        "id": 6,
+        "transactionsDetails": [
+          {
+            "transactionId": 6,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 12
+          },
+          {
+            "transactionId": 6,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 13
           }
         ]
       },
@@ -590,15 +643,31 @@
       "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
       "email": "fbryn@gmail.com",
       "status": "approved",
-      "subTotals": 11000000,
-      "startDate": "5/5/2020, 4:02:51 PM",
-      "endDate": "5/5/2020, 4:05:30 PM",
+      "subTotals": 31500000,
+      "startDate": "5/5/2020, 10:38:55 PM",
+      "endDate": "5/5/2020, 10:41:23 PM",
+      "totalItems": 3,
+      "paymentMethod": "Transfer Bank",
+      "deliveryCourier": "economy",
+      "deliveryFee": 0,
+      "grandTotals": 31500000,
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "fullName": "Silvy febryana",
+      "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+      "email": "fbryn@gmail.com",
+      "status": "pending",
+      "subTotals": 48000000,
+      "startDate": "5/5/2020, 10:40:11 PM",
+      "endDate": "",
       "totalItems": 2,
       "paymentMethod": "Transfer Bank",
-      "deliveryCourier": "express",
-      "deliveryFee": 20000,
-      "grandTotals": 11020000,
-      "id": 3
+      "deliveryCourier": "sameday",
+      "deliveryFee": 50000,
+      "grandTotals": 48050000,
+      "id": 4
     },
     {
       "0": {
@@ -608,69 +677,235 @@
           "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
           "email": "gp@mail.com",
           "status": "pending",
-          "subTotals": 46000000,
-          "startDate": "5/5/2020, 3:53:32 PM",
+          "subTotals": 64000000,
+          "startDate": "5/5/2020, 10:35:39 PM",
           "endDate": "",
-          "totalItems": 2,
+          "totalItems": 3,
           "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "sameday",
-          "deliveryFee": 50000,
-          "grandTotals": 46050000,
+          "deliveryCourier": "express",
+          "deliveryFee": 20000,
+          "grandTotals": 64020000,
           "id": 1,
           "transactionsDetails": [
             {
               "transactionId": 1,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 2,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 40000000,
+              "id": 1
+            },
+            {
+              "transactionId": 1,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 24000000,
+              "id": 2
+            }
+          ]
+        },
+        "1": {
+          "userId": 6,
+          "fullName": "Gabriel Ilham",
+          "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+          "email": "gp@mail.com",
+          "status": "pending",
+          "subTotals": 51500000,
+          "startDate": "5/5/2020, 10:37:11 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 51550000,
+          "id": 2,
+          "transactionsDetails": [
+            {
+              "transactionId": 2,
+              "itemId": 4,
               "itemPrice": "23000000",
               "itemQuantity": 2,
               "itemName": "iMac (2019)",
               "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
               "totalItems": 46000000,
-              "id": 1
-            }
-          ]
-        },
-        "1": {
-          "userId": 4,
-          "fullName": "Silvy febryana",
-          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-          "email": "fbryn@gmail.com",
-          "status": "pending",
-          "subTotals": 20500000,
-          "startDate": "5/5/2020, 3:53:58 PM",
-          "endDate": "",
-          "totalItems": 2,
-          "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "express",
-          "deliveryFee": 20000,
-          "grandTotals": 20520000,
-          "id": 2,
-          "transactionsDetails": [
-            {
-              "transactionId": 2,
-              "itemPrice": 15000000,
-              "itemQuantity": 1,
-              "itemName": "iPad Pro 3",
-              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-              "totalItems": 15000000,
-              "id": 2
-            },
-            {
-              "transactionId": 2,
-              "itemPrice": "5500000",
-              "itemQuantity": 1,
-              "itemName": "iPhone 7 Plus",
-              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-              "totalItems": 5500000,
               "id": 3
             },
             {
               "transactionId": 2,
+              "itemId": 1,
               "itemPrice": "5500000",
               "itemQuantity": 1,
               "itemName": "iPhone 7 Plus",
               "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
               "totalItems": 5500000,
               "id": 4
+            },
+            {
+              "transactionId": 2,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 5
+            }
+          ]
+        },
+        "2": {
+          "userId": 4,
+          "fullName": "Silvy febryana",
+          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+          "email": "fbryn@gmail.com",
+          "status": "pending",
+          "subTotals": 31500000,
+          "startDate": "5/5/2020, 10:38:55 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "economy",
+          "deliveryFee": 0,
+          "grandTotals": 31500000,
+          "id": 3,
+          "transactionsDetails": [
+            {
+              "transactionId": 3,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 1,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 20000000,
+              "id": 6
+            },
+            {
+              "transactionId": 3,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 7
+            },
+            {
+              "transactionId": 3,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 8
+            },
+            {
+              "transactionId": 3,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 9
+            }
+          ]
+        },
+        "3": {
+          "userId": 4,
+          "fullName": "Silvy febryana",
+          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+          "email": "fbryn@gmail.com",
+          "status": "pending",
+          "subTotals": 48000000,
+          "startDate": "5/5/2020, 10:40:11 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 48050000,
+          "id": 4,
+          "transactionsDetails": [
+            {
+              "transactionId": 4,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 2,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 48000000,
+              "id": 10
+            }
+          ]
+        },
+        "4": {
+          "userId": 1,
+          "fullName": "silvy dharma febryana",
+          "address": "jl. terusan sarijadi no 52,\nkota bandung",
+          "email": "silvysilvy@mail.com",
+          "status": "pending",
+          "subTotals": 40000000,
+          "startDate": "5/5/2020, 10:40:39 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "instant",
+          "deliveryFee": 100000,
+          "grandTotals": 40100000,
+          "id": 5,
+          "transactionsDetails": [
+            {
+              "transactionId": 5,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 2,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 40000000,
+              "id": 11
+            }
+          ]
+        },
+        "5": {
+          "userId": 1,
+          "fullName": "silvy dharma febryana",
+          "address": "jl. terusan sarijadi no 52,\nkota bandung",
+          "email": "silvysilvy@mail.com",
+          "status": "pending",
+          "subTotals": 30000000,
+          "startDate": "5/5/2020, 10:40:52 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 30050000,
+          "id": 6,
+          "transactionsDetails": [
+            {
+              "transactionId": 6,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 24000000,
+              "id": 12
+            },
+            {
+              "transactionId": 6,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 13
             }
           ]
         },
@@ -679,97 +914,322 @@
         "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
         "email": "gp@mail.com",
         "status": "approved",
-        "subTotals": 46000000,
-        "startDate": "5/5/2020, 3:53:32 PM",
-        "endDate": "5/5/2020, 3:54:22 PM",
-        "totalItems": 2,
+        "subTotals": 64000000,
+        "startDate": "5/5/2020, 10:35:39 PM",
+        "endDate": "5/5/2020, 10:41:29 PM",
+        "totalItems": 3,
         "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "sameday",
-        "deliveryFee": 50000,
-        "grandTotals": 46050000,
+        "deliveryCourier": "express",
+        "deliveryFee": 20000,
+        "grandTotals": 64020000,
         "id": 1,
         "transactionsDetails": [
           {
             "transactionId": 1,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 1
+          },
+          {
+            "transactionId": 1,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 2
+          }
+        ]
+      },
+      "1": {
+        "userId": 6,
+        "fullName": "Gabriel Ilham",
+        "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+        "email": "gp@mail.com",
+        "status": "pending",
+        "subTotals": 51500000,
+        "startDate": "5/5/2020, 10:37:11 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 51550000,
+        "id": 2,
+        "transactionsDetails": [
+          {
+            "transactionId": 2,
+            "itemId": 4,
             "itemPrice": "23000000",
             "itemQuantity": 2,
             "itemName": "iMac (2019)",
             "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
             "totalItems": 46000000,
-            "id": 1
+            "id": 3
+          },
+          {
+            "transactionId": 2,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 4
+          },
+          {
+            "transactionId": 2,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 5
           }
         ]
       },
-      "1": {
+      "2": {
         "0": {
           "userId": 6,
           "fullName": "Gabriel Ilham",
           "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
           "email": "gp@mail.com",
           "status": "pending",
-          "subTotals": 46000000,
-          "startDate": "5/5/2020, 3:53:32 PM",
+          "subTotals": 64000000,
+          "startDate": "5/5/2020, 10:35:39 PM",
           "endDate": "",
-          "totalItems": 2,
+          "totalItems": 3,
           "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "sameday",
-          "deliveryFee": 50000,
-          "grandTotals": 46050000,
+          "deliveryCourier": "express",
+          "deliveryFee": 20000,
+          "grandTotals": 64020000,
           "id": 1,
           "transactionsDetails": [
             {
               "transactionId": 1,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 2,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 40000000,
+              "id": 1
+            },
+            {
+              "transactionId": 1,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 24000000,
+              "id": 2
+            }
+          ]
+        },
+        "1": {
+          "userId": 6,
+          "fullName": "Gabriel Ilham",
+          "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+          "email": "gp@mail.com",
+          "status": "pending",
+          "subTotals": 51500000,
+          "startDate": "5/5/2020, 10:37:11 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 51550000,
+          "id": 2,
+          "transactionsDetails": [
+            {
+              "transactionId": 2,
+              "itemId": 4,
               "itemPrice": "23000000",
               "itemQuantity": 2,
               "itemName": "iMac (2019)",
               "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
               "totalItems": 46000000,
-              "id": 1
-            }
-          ]
-        },
-        "1": {
-          "userId": 4,
-          "fullName": "Silvy febryana",
-          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-          "email": "fbryn@gmail.com",
-          "status": "pending",
-          "subTotals": 20500000,
-          "startDate": "5/5/2020, 3:53:58 PM",
-          "endDate": "",
-          "totalItems": 2,
-          "paymentMethod": "Transfer Bank",
-          "deliveryCourier": "express",
-          "deliveryFee": 20000,
-          "grandTotals": 20520000,
-          "id": 2,
-          "transactionsDetails": [
-            {
-              "transactionId": 2,
-              "itemPrice": 15000000,
-              "itemQuantity": 1,
-              "itemName": "iPad Pro 3",
-              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-              "totalItems": 15000000,
-              "id": 2
-            },
-            {
-              "transactionId": 2,
-              "itemPrice": "5500000",
-              "itemQuantity": 1,
-              "itemName": "iPhone 7 Plus",
-              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-              "totalItems": 5500000,
               "id": 3
             },
             {
               "transactionId": 2,
+              "itemId": 1,
               "itemPrice": "5500000",
               "itemQuantity": 1,
               "itemName": "iPhone 7 Plus",
               "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
               "totalItems": 5500000,
               "id": 4
+            },
+            {
+              "transactionId": 2,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 5
+            }
+          ]
+        },
+        "2": {
+          "userId": 4,
+          "fullName": "Silvy febryana",
+          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+          "email": "fbryn@gmail.com",
+          "status": "pending",
+          "subTotals": 31500000,
+          "startDate": "5/5/2020, 10:38:55 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "economy",
+          "deliveryFee": 0,
+          "grandTotals": 31500000,
+          "id": 3,
+          "transactionsDetails": [
+            {
+              "transactionId": 3,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 1,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 20000000,
+              "id": 6
+            },
+            {
+              "transactionId": 3,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 7
+            },
+            {
+              "transactionId": 3,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 8
+            },
+            {
+              "transactionId": 3,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 9
+            }
+          ]
+        },
+        "3": {
+          "userId": 4,
+          "fullName": "Silvy febryana",
+          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+          "email": "fbryn@gmail.com",
+          "status": "pending",
+          "subTotals": 48000000,
+          "startDate": "5/5/2020, 10:40:11 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 48050000,
+          "id": 4,
+          "transactionsDetails": [
+            {
+              "transactionId": 4,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 2,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 48000000,
+              "id": 10
+            }
+          ]
+        },
+        "4": {
+          "userId": 1,
+          "fullName": "silvy dharma febryana",
+          "address": "jl. terusan sarijadi no 52,\nkota bandung",
+          "email": "silvysilvy@mail.com",
+          "status": "pending",
+          "subTotals": 40000000,
+          "startDate": "5/5/2020, 10:40:39 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "instant",
+          "deliveryFee": 100000,
+          "grandTotals": 40100000,
+          "id": 5,
+          "transactionsDetails": [
+            {
+              "transactionId": 5,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 2,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 40000000,
+              "id": 11
+            }
+          ]
+        },
+        "5": {
+          "userId": 1,
+          "fullName": "silvy dharma febryana",
+          "address": "jl. terusan sarijadi no 52,\nkota bandung",
+          "email": "silvysilvy@mail.com",
+          "status": "pending",
+          "subTotals": 30000000,
+          "startDate": "5/5/2020, 10:40:52 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 30050000,
+          "id": 6,
+          "transactionsDetails": [
+            {
+              "transactionId": 6,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 24000000,
+              "id": 12
+            },
+            {
+              "transactionId": 6,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 13
             }
           ]
         },
@@ -778,90 +1238,19 @@
         "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
         "email": "fbryn@gmail.com",
         "status": "approved",
-        "subTotals": 20500000,
-        "startDate": "5/5/2020, 3:53:58 PM",
-        "endDate": "5/5/2020, 3:54:25 PM",
-        "totalItems": 2,
+        "subTotals": 31500000,
+        "startDate": "5/5/2020, 10:38:55 PM",
+        "endDate": "5/5/2020, 10:41:23 PM",
+        "totalItems": 3,
         "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "express",
-        "deliveryFee": 20000,
-        "grandTotals": 20520000,
-        "id": 2,
-        "transactionsDetails": [
-          {
-            "transactionId": 2,
-            "itemPrice": 15000000,
-            "itemQuantity": 1,
-            "itemName": "iPad Pro 3",
-            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-            "totalItems": 15000000,
-            "id": 2
-          },
-          {
-            "transactionId": 2,
-            "itemPrice": "5500000",
-            "itemQuantity": 1,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 5500000,
-            "id": 3
-          },
-          {
-            "transactionId": 2,
-            "itemPrice": "5500000",
-            "itemQuantity": 1,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 5500000,
-            "id": 4
-          }
-        ]
-      },
-      "2": {
-        "userId": 4,
-        "fullName": "Silvy febryana",
-        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
-        "email": "fbryn@gmail.com",
-        "status": "pending",
-        "subTotals": 11000000,
-        "startDate": "5/5/2020, 4:02:51 PM",
-        "endDate": "",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "express",
-        "deliveryFee": 20000,
-        "grandTotals": 11020000,
+        "deliveryCourier": "economy",
+        "deliveryFee": 0,
+        "grandTotals": 31500000,
         "id": 3,
         "transactionsDetails": [
           {
             "transactionId": 3,
-            "itemPrice": "5500000",
-            "itemQuantity": 2,
-            "itemName": "iPhone 7 Plus",
-            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-            "totalItems": 11000000,
-            "id": 5
-          }
-        ]
-      },
-      "3": {
-        "userId": 1,
-        "fullName": "silvy dharma febryana",
-        "address": "jl. terusan sarijadi no 52,\nkota bandung",
-        "email": "silvysilvy@mail.com",
-        "status": "pending",
-        "subTotals": 26000000,
-        "startDate": "5/5/2020, 4:03:35 PM",
-        "endDate": "",
-        "totalItems": 2,
-        "paymentMethod": "Transfer Bank",
-        "deliveryCourier": "economy",
-        "deliveryFee": 0,
-        "grandTotals": 26000000,
-        "id": 4,
-        "transactionsDetails": [
-          {
-            "transactionId": 4,
+            "itemId": 3,
             "itemPrice": 20000000,
             "itemQuantity": 1,
             "itemName": "Macbook Pro",
@@ -870,13 +1259,366 @@
             "id": 6
           },
           {
-            "transactionId": 4,
+            "transactionId": 3,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 7
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
             "itemPrice": "6000000",
             "itemQuantity": 1,
             "itemName": "iPad 7 ",
             "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
             "totalItems": 6000000,
-            "id": 7
+            "id": 8
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 9
+          }
+        ]
+      },
+      "3": {
+        "userId": 4,
+        "fullName": "Silvy febryana",
+        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+        "email": "fbryn@gmail.com",
+        "status": "pending",
+        "subTotals": 48000000,
+        "startDate": "5/5/2020, 10:40:11 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 48050000,
+        "id": 4,
+        "transactionsDetails": [
+          {
+            "transactionId": 4,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 2,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 48000000,
+            "id": 10
+          }
+        ]
+      },
+      "4": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 40000000,
+        "startDate": "5/5/2020, 10:40:39 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "instant",
+        "deliveryFee": 100000,
+        "grandTotals": 40100000,
+        "id": 5,
+        "transactionsDetails": [
+          {
+            "transactionId": 5,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 11
+          }
+        ]
+      },
+      "5": {
+        "0": {
+          "userId": 6,
+          "fullName": "Gabriel Ilham",
+          "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+          "email": "gp@mail.com",
+          "status": "pending",
+          "subTotals": 64000000,
+          "startDate": "5/5/2020, 10:35:39 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "express",
+          "deliveryFee": 20000,
+          "grandTotals": 64020000,
+          "id": 1,
+          "transactionsDetails": [
+            {
+              "transactionId": 1,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 2,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 40000000,
+              "id": 1
+            },
+            {
+              "transactionId": 1,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 24000000,
+              "id": 2
+            }
+          ]
+        },
+        "1": {
+          "userId": 6,
+          "fullName": "Gabriel Ilham",
+          "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+          "email": "gp@mail.com",
+          "status": "pending",
+          "subTotals": 51500000,
+          "startDate": "5/5/2020, 10:37:11 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 51550000,
+          "id": 2,
+          "transactionsDetails": [
+            {
+              "transactionId": 2,
+              "itemId": 4,
+              "itemPrice": "23000000",
+              "itemQuantity": 2,
+              "itemName": "iMac (2019)",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+              "totalItems": 46000000,
+              "id": 3
+            },
+            {
+              "transactionId": 2,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 4
+            },
+            {
+              "transactionId": 2,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 5
+            }
+          ]
+        },
+        "2": {
+          "userId": 4,
+          "fullName": "Silvy febryana",
+          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+          "email": "fbryn@gmail.com",
+          "status": "pending",
+          "subTotals": 31500000,
+          "startDate": "5/5/2020, 10:38:55 PM",
+          "endDate": "",
+          "totalItems": 3,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "economy",
+          "deliveryFee": 0,
+          "grandTotals": 31500000,
+          "id": 3,
+          "transactionsDetails": [
+            {
+              "transactionId": 3,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 1,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 20000000,
+              "id": 6
+            },
+            {
+              "transactionId": 3,
+              "itemId": 1,
+              "itemPrice": "5500000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 7 Plus",
+              "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+              "totalItems": 5500000,
+              "id": 7
+            },
+            {
+              "transactionId": 3,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 8
+            },
+            {
+              "transactionId": 3,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 9
+            }
+          ]
+        },
+        "3": {
+          "userId": 4,
+          "fullName": "Silvy febryana",
+          "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+          "email": "fbryn@gmail.com",
+          "status": "pending",
+          "subTotals": 48000000,
+          "startDate": "5/5/2020, 10:40:11 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 48050000,
+          "id": 4,
+          "transactionsDetails": [
+            {
+              "transactionId": 4,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 2,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 48000000,
+              "id": 10
+            }
+          ]
+        },
+        "4": {
+          "userId": 1,
+          "fullName": "silvy dharma febryana",
+          "address": "jl. terusan sarijadi no 52,\nkota bandung",
+          "email": "silvysilvy@mail.com",
+          "status": "pending",
+          "subTotals": 40000000,
+          "startDate": "5/5/2020, 10:40:39 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "instant",
+          "deliveryFee": 100000,
+          "grandTotals": 40100000,
+          "id": 5,
+          "transactionsDetails": [
+            {
+              "transactionId": 5,
+              "itemId": 3,
+              "itemPrice": 20000000,
+              "itemQuantity": 2,
+              "itemName": "Macbook Pro",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+              "totalItems": 40000000,
+              "id": 11
+            }
+          ]
+        },
+        "5": {
+          "userId": 1,
+          "fullName": "silvy dharma febryana",
+          "address": "jl. terusan sarijadi no 52,\nkota bandung",
+          "email": "silvysilvy@mail.com",
+          "status": "pending",
+          "subTotals": 30000000,
+          "startDate": "5/5/2020, 10:40:52 PM",
+          "endDate": "",
+          "totalItems": 2,
+          "paymentMethod": "Transfer Bank",
+          "deliveryCourier": "sameday",
+          "deliveryFee": 50000,
+          "grandTotals": 30050000,
+          "id": 6,
+          "transactionsDetails": [
+            {
+              "transactionId": 6,
+              "itemId": 6,
+              "itemPrice": "24000000",
+              "itemQuantity": 1,
+              "itemName": "iPhone 11 Pro Max",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+              "totalItems": 24000000,
+              "id": 12
+            },
+            {
+              "transactionId": 6,
+              "itemId": 5,
+              "itemPrice": "6000000",
+              "itemQuantity": 1,
+              "itemName": "iPad 7 ",
+              "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+              "totalItems": 6000000,
+              "id": 13
+            }
+          ]
+        },
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "approved",
+        "subTotals": 30000000,
+        "startDate": "5/5/2020, 10:40:52 PM",
+        "endDate": "5/5/2020, 10:41:26 PM",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 30050000,
+        "id": 6,
+        "transactionsDetails": [
+          {
+            "transactionId": 6,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 12
+          },
+          {
+            "transactionId": 6,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 13
           }
         ]
       },
@@ -885,62 +1627,305 @@
       "address": "jl. terusan sarijadi no 52,\nkota bandung",
       "email": "silvysilvy@mail.com",
       "status": "approved",
-      "subTotals": 26000000,
-      "startDate": "5/5/2020, 4:03:35 PM",
-      "endDate": "5/5/2020, 4:05:33 PM",
+      "subTotals": 40000000,
+      "startDate": "5/5/2020, 10:40:39 PM",
+      "endDate": "5/5/2020, 10:42:00 PM",
       "totalItems": 2,
       "paymentMethod": "Transfer Bank",
-      "deliveryCourier": "economy",
-      "deliveryFee": 0,
-      "grandTotals": 26000000,
-      "id": 4
+      "deliveryCourier": "instant",
+      "deliveryFee": 100000,
+      "grandTotals": 40100000,
+      "id": 5
     },
     {
-      "userId": 7,
-      "fullName": "beni si sapi",
-      "email": "beni@dora.com",
-      "status": "pending",
-      "subTotals": 49500000,
-      "startDate": "5/5/2020, 6:26:25 PM",
-      "endDate": "",
-      "totalItems": 3,
+      "0": {
+        "userId": 6,
+        "fullName": "Gabriel Ilham",
+        "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+        "email": "gp@mail.com",
+        "status": "pending",
+        "subTotals": 64000000,
+        "startDate": "5/5/2020, 10:35:39 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "express",
+        "deliveryFee": 20000,
+        "grandTotals": 64020000,
+        "id": 1,
+        "transactionsDetails": [
+          {
+            "transactionId": 1,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 1
+          },
+          {
+            "transactionId": 1,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 2
+          }
+        ]
+      },
+      "1": {
+        "userId": 6,
+        "fullName": "Gabriel Ilham",
+        "address": "Jl. Salak no 15, Pejuang Estate.\nKota Harapan Indah, Bekasi. \nJawa Barat 17615",
+        "email": "gp@mail.com",
+        "status": "pending",
+        "subTotals": 51500000,
+        "startDate": "5/5/2020, 10:37:11 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 51550000,
+        "id": 2,
+        "transactionsDetails": [
+          {
+            "transactionId": 2,
+            "itemId": 4,
+            "itemPrice": "23000000",
+            "itemQuantity": 2,
+            "itemName": "iMac (2019)",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
+            "totalItems": 46000000,
+            "id": 3
+          },
+          {
+            "transactionId": 2,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 4
+          },
+          {
+            "transactionId": 2,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 5
+          }
+        ]
+      },
+      "2": {
+        "userId": 4,
+        "fullName": "Silvy febryana",
+        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+        "email": "fbryn@gmail.com",
+        "status": "pending",
+        "subTotals": 31500000,
+        "startDate": "5/5/2020, 10:38:55 PM",
+        "endDate": "",
+        "totalItems": 3,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "economy",
+        "deliveryFee": 0,
+        "grandTotals": 31500000,
+        "id": 3,
+        "transactionsDetails": [
+          {
+            "transactionId": 3,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 1,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 20000000,
+            "id": 6
+          },
+          {
+            "transactionId": 3,
+            "itemId": 1,
+            "itemPrice": "5500000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 7 Plus",
+            "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
+            "totalItems": 5500000,
+            "id": 7
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 8
+          },
+          {
+            "transactionId": 3,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 9
+          }
+        ]
+      },
+      "3": {
+        "userId": 4,
+        "fullName": "Silvy febryana",
+        "address": "Jl. Perak No 1/3 RT02/RW023. Bekasi. Jawa Barat",
+        "email": "fbryn@gmail.com",
+        "status": "pending",
+        "subTotals": 48000000,
+        "startDate": "5/5/2020, 10:40:11 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 48050000,
+        "id": 4,
+        "transactionsDetails": [
+          {
+            "transactionId": 4,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 2,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 48000000,
+            "id": 10
+          }
+        ]
+      },
+      "4": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 40000000,
+        "startDate": "5/5/2020, 10:40:39 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "instant",
+        "deliveryFee": 100000,
+        "grandTotals": 40100000,
+        "id": 5,
+        "transactionsDetails": [
+          {
+            "transactionId": 5,
+            "itemId": 3,
+            "itemPrice": 20000000,
+            "itemQuantity": 2,
+            "itemName": "Macbook Pro",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+            "totalItems": 40000000,
+            "id": 11
+          }
+        ]
+      },
+      "5": {
+        "userId": 1,
+        "fullName": "silvy dharma febryana",
+        "address": "jl. terusan sarijadi no 52,\nkota bandung",
+        "email": "silvysilvy@mail.com",
+        "status": "pending",
+        "subTotals": 30000000,
+        "startDate": "5/5/2020, 10:40:52 PM",
+        "endDate": "",
+        "totalItems": 2,
+        "paymentMethod": "Transfer Bank",
+        "deliveryCourier": "sameday",
+        "deliveryFee": 50000,
+        "grandTotals": 30050000,
+        "id": 6,
+        "transactionsDetails": [
+          {
+            "transactionId": 6,
+            "itemId": 6,
+            "itemPrice": "24000000",
+            "itemQuantity": 1,
+            "itemName": "iPhone 11 Pro Max",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+            "totalItems": 24000000,
+            "id": 12
+          },
+          {
+            "transactionId": 6,
+            "itemId": 5,
+            "itemPrice": "6000000",
+            "itemQuantity": 1,
+            "itemName": "iPad 7 ",
+            "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+            "totalItems": 6000000,
+            "id": 13
+          }
+        ]
+      },
+      "userId": 1,
+      "fullName": "silvy dharma febryana",
+      "address": "jl. terusan sarijadi no 52,\nkota bandung",
+      "email": "silvysilvy@mail.com",
+      "status": "approved",
+      "subTotals": 30000000,
+      "startDate": "5/5/2020, 10:40:52 PM",
+      "endDate": "5/5/2020, 10:41:26 PM",
+      "totalItems": 2,
       "paymentMethod": "Transfer Bank",
-      "deliveryCourier": "express",
-      "deliveryFee": 20000,
-      "grandTotals": 49520000,
-      "id": 5
+      "deliveryCourier": "sameday",
+      "deliveryFee": 50000,
+      "grandTotals": 30050000,
+      "id": 6
     }
   ],
   "transactionsDetails": [
     {
       "transactionId": 1,
+      "itemId": 3,
+      "itemPrice": 20000000,
+      "itemQuantity": 2,
+      "itemName": "Macbook Pro",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+      "totalItems": 40000000,
+      "id": 1
+    },
+    {
+      "transactionId": 1,
+      "itemId": 6,
+      "itemPrice": "24000000",
+      "itemQuantity": 1,
+      "itemName": "iPhone 11 Pro Max",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "totalItems": 24000000,
+      "id": 2
+    },
+    {
+      "transactionId": 2,
+      "itemId": 4,
       "itemPrice": "23000000",
       "itemQuantity": 2,
       "itemName": "iMac (2019)",
       "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/m/imac-27-cto-hero-201903_1_1.jpeg",
       "totalItems": 46000000,
-      "id": 1
-    },
-    {
-      "transactionId": 2,
-      "itemPrice": 15000000,
-      "itemQuantity": 1,
-      "itemName": "iPad Pro 3",
-      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-pro-11-select-cell-spacegray-201810.png",
-      "totalItems": 15000000,
-      "id": 2
-    },
-    {
-      "transactionId": 2,
-      "itemPrice": "5500000",
-      "itemQuantity": 1,
-      "itemName": "iPhone 7 Plus",
-      "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-      "totalItems": 5500000,
       "id": 3
     },
     {
       "transactionId": 2,
+      "itemId": 1,
       "itemPrice": "5500000",
       "itemQuantity": 1,
       "itemName": "iPhone 7 Plus",
@@ -949,16 +1934,18 @@
       "id": 4
     },
     {
-      "transactionId": 3,
+      "transactionId": 2,
+      "itemId": 1,
       "itemPrice": "5500000",
-      "itemQuantity": 2,
+      "itemQuantity": 1,
       "itemName": "iPhone 7 Plus",
       "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
-      "totalItems": 11000000,
+      "totalItems": 5500000,
       "id": 5
     },
     {
-      "transactionId": 4,
+      "transactionId": 3,
+      "itemId": 3,
       "itemPrice": 20000000,
       "itemQuantity": 1,
       "itemName": "Macbook Pro",
@@ -967,49 +1954,74 @@
       "id": 6
     },
     {
-      "transactionId": 4,
-      "itemPrice": "6000000",
-      "itemQuantity": 1,
-      "itemName": "iPad 7 ",
-      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
-      "totalItems": 6000000,
-      "id": 7
-    },
-    {
-      "transactionId": 5,
-      "itemPrice": 20000000,
-      "itemQuantity": 1,
-      "itemName": "Macbook Pro",
-      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
-      "totalItems": 20000000,
-      "id": 8
-    },
-    {
-      "transactionId": 5,
-      "itemPrice": "24000000",
-      "itemQuantity": 1,
-      "itemName": "iPhone 11 Pro Max",
-      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
-      "totalItems": 24000000,
-      "id": 9
-    },
-    {
-      "transactionId": 5,
+      "transactionId": 3,
+      "itemId": 1,
       "itemPrice": "5500000",
       "itemQuantity": 1,
       "itemName": "iPhone 7 Plus",
       "itemImage": "https://ibox.co.id/media/wysiwyg/PromoOnline/web-banner---iphone-7-plus-rev.png",
       "totalItems": 5500000,
+      "id": 7
+    },
+    {
+      "transactionId": 3,
+      "itemId": 5,
+      "itemPrice": "6000000",
+      "itemQuantity": 1,
+      "itemName": "iPad 7 ",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+      "totalItems": 6000000,
+      "id": 8
+    },
+    {
+      "transactionId": 3,
+      "itemId": 5,
+      "itemPrice": "6000000",
+      "itemQuantity": 1,
+      "itemName": "iPad 7 ",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+      "totalItems": 6000000,
+      "id": 9
+    },
+    {
+      "transactionId": 4,
+      "itemId": 6,
+      "itemPrice": "24000000",
+      "itemQuantity": 2,
+      "itemName": "iPhone 11 Pro Max",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
+      "totalItems": 48000000,
       "id": 10
     },
     {
       "transactionId": 5,
+      "itemId": 3,
+      "itemPrice": 20000000,
+      "itemQuantity": 2,
+      "itemName": "Macbook Pro",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/b/mbp15touch-silver-select-cto-201807_3_1.jpeg",
+      "totalItems": 40000000,
+      "id": 11
+    },
+    {
+      "transactionId": 6,
+      "itemId": 6,
       "itemPrice": "24000000",
       "itemQuantity": 1,
       "itemName": "iPhone 11 Pro Max",
       "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max-midnight-green_3.png",
       "totalItems": 24000000,
-      "id": 11
+      "id": 12
+    },
+    {
+      "transactionId": 6,
+      "itemId": 5,
+      "itemPrice": "6000000",
+      "itemQuantity": 1,
+      "itemName": "iPad 7 ",
+      "itemImage": "https://ibox.co.id/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/i/p/ipad-wifi-select-space-201909_geo_us.png",
+      "totalItems": 6000000,
+      "id": 13
     }
   ]
 }

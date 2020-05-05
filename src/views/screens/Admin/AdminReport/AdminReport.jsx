@@ -23,14 +23,15 @@ class AdminReport extends React.Component {
             allTotalPay: 0,
             // id: 0
         },
-        totalPays: 0,
-        list: [],
-        product: []
+        // totalPays: 0,
+        totalList: [],
+        productList: [],
+        productYangDiList: []
 
     }
 
-    getUserList = () => {
-        let totalsUserPay = 0
+    getList = () => {
+         let totalsUserPay = 0
         Axios.get(`${API_URL}/users`, {
             params: {
                 role: "user",
@@ -38,81 +39,56 @@ class AdminReport extends React.Component {
             }
         })
             .then((res) => {
-                this.setState({ list: res.data })
+                this.setState({ totalList: res.data })
             })
             .catch((err) => {
                 console.log(err);
             });
+
     }
 
 
     getProductList = () => {
-        Axios.get(`${API_URL}/products`, {
-            params :{
-                _embed: "transactions"
+        Axios.get(`${API_URL}/products`)
+            .then((res) => {
+                this.setState({ productList: res.data })
+                console.log(res.data);
+
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+
+        Axios.get(`${API_URL}/transactions`, {
+            params: {
+                _embed: "transactionsDetails"
             }
         })
-        .then((res) => {
-            console.log(res.data);
-            this.setState({ product: res.data })
-            this.state.product.map((val) => {
-                Axios.get(`${API_URL}/transactions`, {
-                    params: {
-                        _embed: "transactionsDetails",
-                        productId: val.id
-                    }
-                })
+            .then((res) => {
+                this.setState({ productYangDiList: res.data })
+                console.log(res.data);
             })
-        })
-        .catch((err) => {
-            console.log(err);
-            
-        })
+            .catch((err) => {
+                console.log(err)
+            })
+       
     }
 
     componentDidMount() {
-        this.getUserList()
+        this.getList()
         this.getProductList()
     }
 
     renderListData = () => {
-        const { list } = this.state
+        const { totalList } = this.state
         let totalPayUser = parseInt()
-        return list.map((val) => {
+        return totalList.map((val) => {
             return (
                 <tr>
                     <td>{val.id}</td>
                     <td>{val.fullName}</td>
                     <td>
-                    {
-                        val.transactions.map((val) => {
-                            totalPayUser += val.subTotals
-                            if ( val.status === "approved" ) {
-                                if (val.subTotals.length > 1) {
-                                    return totalPayUser
-                                } else {
-                                    return val.subTotals
-                                }
-                            } else {
-                                return null 
-                            }
-                        })
-                    }
-                    </td>
-                </tr>
-            )
-        })
-    }
-
-    renderProductList = () => {
-        const { product } = this.state
-        return product.map((val) => {
-            return (
-                <tr>
-                    <td>{val.id}</td>
-                    <td>{val.productName}</td>
-                    <td>
-                        {/* {
+                        {
                             val.transactions.map((val) => {
                                 totalPayUser += val.subTotals
                                 if (val.status === "approved") {
@@ -125,7 +101,42 @@ class AdminReport extends React.Component {
                                     return null
                                 }
                             })
-                        } */}
+                        }
+                    </td>
+                </tr>
+            )
+        })
+    }
+
+    renderProductList = () => {
+        const { productList } = this.state
+
+        return productList.map((val) => {
+
+            const { productName, id } = val
+            const { productYangDiList } = this.state
+            let allTotalQuantity = 0
+
+            productYangDiList.map((value) => {
+                value.transactionsDetails.map((values) => {
+                    if( value.status === "approved" ) {
+                        if (values.itemId === id) {
+                            allTotalQuantity += values.itemQuantity
+                        }
+                    }
+                })
+            })
+
+            return (
+                <tr>
+                    <td>{id}</td>
+                    <td>{productName}</td>
+                    <td>
+                    {
+                        allTotalQuantity > 0 ? (
+                            <b>{allTotalQuantity} pcs</b>
+                        ) : <p style={{color: "red", fontWeight: "100px"}}>belum ada history</p>
+                    }
                     </td>
                 </tr>
             )
