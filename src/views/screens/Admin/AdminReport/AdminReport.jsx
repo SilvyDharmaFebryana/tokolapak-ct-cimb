@@ -109,38 +109,38 @@ class AdminReport extends React.Component {
 
     renderProductList = () => {
 
-        // const { productList } = this.state
+        const { productList } = this.state
 
-        // return productList.map((val) => {
+        return productList.map((val) => {
 
-        //     const { productName, id } = val
-        //     const { productYangDiList } = this.state
-        //     let allTotalQuantity = 0
+            const { productName, id } = val
+            const { productYangDiList } = this.state
+            let allTotalQuantity = 0
 
-        //     productYangDiList.map((value) => {
-        //         value.transactionsDetails.map((values) => {
-        //             if( value.status === "approved" ) {
-        //                 if (values.itemId === id) {
-        //                     allTotalQuantity += values.itemQuantity
-        //                 }
-        //             }
-        //         })
-        //     })
+            productYangDiList.map((value) => {
+                value.transactionsDetails.map((values) => {
+                    if( value.status === "approved" ) {
+                        if (values.itemId === id) {
+                            allTotalQuantity += values.itemQuantity
+                        }
+                    }
+                })
+            })
 
-        //     return (
-        //         <tr>
-        //             <td>{id}</td>
-        //             <td>{productName}</td>
-        //             <td>
-        //             {
-        //                 allTotalQuantity > 0 ? (
-        //                     <b>{allTotalQuantity} pcs</b>
-        //                 ) : <p style={{color: "red", fontWeight: "100px"}}>belum ada history</p>
-        //             }
-        //             </td>
-        //         </tr>
-        //     )
-        // })
+            return (
+                <tr>
+                    <td>{id}</td>
+                    <td>{productName}</td>
+                    <td>
+                    {
+                        allTotalQuantity > 0 ? (
+                            <b>{allTotalQuantity} pcs</b>
+                        ) : <p style={{color: "red", fontWeight: "100px"}}>belum ada history</p>
+                    }
+                    </td>
+                </tr>
+            )
+        })
     }
 
 

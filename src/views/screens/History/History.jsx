@@ -86,6 +86,11 @@ class History extends React.Component {
                                 ) : null
                             }
                         </td>
+                        <td>
+                            <ButtonUI className="mt-3" type="textual" id="toggler" style={{ marginBottom: '1rem' }}>
+                                Click for Details
+                                </ButtonUI>
+                        </td>
                     </tr>
 
                     <tr
@@ -184,6 +189,7 @@ class History extends React.Component {
                                 <th>Payment Method</th>
                                 <th>Transaction ID</th>
                                 <th>Status</th>
+                                <th>Actions</th>
 
                             </tr>
                         </thead>
