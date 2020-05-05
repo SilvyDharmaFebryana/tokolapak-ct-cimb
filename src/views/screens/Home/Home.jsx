@@ -134,19 +134,27 @@ class Home extends React.Component {
   renderProducts = () => {
     if (this.state.activeCategory === "Phone" ){
         return this.state.phoneList.map((val) => {
-          return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+          if (val.productName.toLowerCase().includes(this.props.search.searchInput.toLowerCase())) {
+            return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+          }
         })
     } else if (this.state.activeCategory === "Tab") {
       return this.state.tabList.map((val) => {
-        return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        if (val.productName.toLowerCase().includes(this.props.search.searchInput.toLowerCase())) {
+          return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        }  
       })
     } else if (this.state.activeCategory === "Laptop") {
       return this.state.laptopList.map((val) => {
-        return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        if (val.productName.toLowerCase().includes(this.props.search.searchInput.toLowerCase())) {
+          return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        }  
       })
     } else if (this.state.activeCategory === "Desktop") {
       return this.state.desktopList.map((val) => {
-        return <Link to={`/product/${val.id}`} style={{ textDecoration: "none", color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        if (val.productName.toLowerCase().includes(this.props.search.searchInput.toLowerCase())){
+          return <Link to={`/product/${val.id}`} style={{ textDecoration: "none" ,color: "inherit" }}><ProductCard key={`bestseller-${val.id}`} className="m-2" data={val} /></Link>
+        }  
       })
     } else {
       return this.state.bestSellerProduct.map((val) => {

@@ -25,14 +25,17 @@ class History extends React.Component {
         Axios.get(`${API_URL}/transactions`, {
             params: {
                 userId: this.props.user.id,
-                status: "approved"
+                status: "approved",
+                _embed: "transactionsDetails",
             }
         })
             .then((res) => {
-               
+
                 this.setState({
                     historyList: res.data
                 });
+                console.log(res.data);
+                
             })
             .catch((err) => {
                 console.log(err);
@@ -66,22 +69,22 @@ class History extends React.Component {
                         }}
                         id="toggler"
                     >
-                  
+
                         <td> {val.userId} </td>
                         <td> {val.fullName} </td>
                         <td> {val.totalItems} </td>
                         <td>  {
-                                new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(val.subTotals)
-                                } 
+                            new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(val.subTotals)
+                        }
                         </td>
                         <td> {val.paymentMethod} </td>
                         <td> trnsctn-00{val.id}-sccs </td>
-                        <td> 
+                        <td>
                             {
                                 val.status === "approved" ? (
-                                    <p style={{ color: "#00b33c", textDecoration: "bold", fontWeight: "1000"}}>Success</p>
-                                ) : null 
-                            } 
+                                    <p style={{ color: "#00b33c", textDecoration: "bold", fontWeight: "1000" }}>Success</p>
+                                ) : null
+                            }
                         </td>
                     </tr>
 
@@ -105,15 +108,15 @@ class History extends React.Component {
                                         </tr>
                                     </thead>
                                     {
-                                        val.productList.map((val) => {
+                                        val.transactionsDetails.map((val) => {
                                             return (
                                                 <tbody>
                                                     <tr>
-                                                        <td><img src={val.product.image} style={{ width: "10" }}/></td>
-                                                        <td>{val.product.productName}</td>
-                                                        <td>{val.quantity}</td>
-                                                        <td>{val.product.price}</td>
-                                                        <td>{val.quantity * val.product.price}</td>
+                                                        <td><img src={val.itemImage} style={{ width: "75%" }} /></td>
+                                                        <td>{val.itemName}</td>
+                                                        <td>{val.itemQuantity}</td>
+                                                        <td>{val.itemPrice}</td>
+                                                        <td>{val.itemQuantity * val.itemPrice}</td>
                                                     </tr>
                                                 </tbody>
 
@@ -122,12 +125,12 @@ class History extends React.Component {
                                     }
                                     <tfoot>
                                         <tr colSpan={2}>
-                                            <th>To</th>
+                                            <th>Delivery To</th>
                                             <td>:</td>
                                             <td>{val.fullName}</td>
                                         </tr>
                                         <tr colSpan={2}>
-                                            <th>Delivery To</th>
+                                            <th>Delivery Address</th>
                                             <td>:</td>
                                             <td>{val.address}</td>
                                         </tr>
@@ -136,13 +139,19 @@ class History extends React.Component {
                                             <td>:</td>
                                             <td>{val.paymentMethod}</td>
                                         </tr>
+                                        <tr colSpan={3}>
+                                            <th>Date of Payment</th>
+                                            <td>:</td>
+                                            <td>{val.startDate}</td>
+                                        </tr>
+                                        <tr colSpan={3}>
+                                            <th>Date Clear</th>
+                                            <td>:</td>
+                                            <td>{val.endDate}</td>
+                                        </tr>
                                     </tfoot>
                                 </table>
                             </div>
-                            {/* <div className="d-flex justify-content-center mt-3 ">
-                                <ButtonUI className="mr-2" onClick={(_) => this.approvedHandler(val.id)} >Approve</ButtonUI>
-                                <ButtonUI type="outlined">Canceled</ButtonUI>
-                            </div> */}
 
                         </td>
                     </tr>
@@ -167,7 +176,7 @@ class History extends React.Component {
                     <table className="dashboard-table">
                         <thead>
                             <tr>
-                               
+
                                 <th>User ID</th>
                                 <th>Full Name</th>
                                 <th>Total Items</th>

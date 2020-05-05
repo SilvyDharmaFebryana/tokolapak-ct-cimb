@@ -24,6 +24,37 @@ class ProductDetails extends React.Component {
     };
     
 
+    addToWishList = () => {
+        Axios.get(`${API_URL}/wishlist/`, {
+            params: {
+                userId: this.props.user.id,
+                productId: this.state.productData.id
+            }
+        }) 
+        .then((res) => {
+            if (res.data.length === 0 ){
+                Axios.post(`${API_URL}/wishlist`,{
+                    userId: this.props.user.id,
+                    productId: this.state.productData.id
+                })
+                .then((res) => {
+                    console.log(res);
+                    swal("", "This item has been add to your wishlist", "success")
+                })
+                .catch((err) => {
+                    console.log(err);
+                    
+                })
+            } else {
+                swal("", "This item has been in your wishlist, search another product", "")
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+            
+        })
+    }
+
 
     addToCartHandler = () => {
         Axios.get(`${API_URL}/cart/`, {
@@ -60,7 +91,6 @@ class ProductDetails extends React.Component {
                     console.log(err);
                     
                 })
-
             }
         })
         .catch((err) => {
@@ -130,12 +160,12 @@ class ProductDetails extends React.Component {
                             this.props.user.id > 0 ? (
                                 <div className="d-flex flex-row mt-4">
                                     <ButtonUI type="contained" onClick={this.addToCartHandler}>Add to cart</ButtonUI>
-                                    <ButtonUI className="ml-4" type="outlined">Add to wishlist</ButtonUI>
+                                    <ButtonUI className="ml-4" onClick={this.addToWishList} type="outlined">Add to wishlist</ButtonUI>
 
                                 </div>
                             ) : <div className="d-flex flex-row mt-4">
                                     <ButtonUI type="contained" onClick={this.addToCartAlert}>Add to cart</ButtonUI>
-                                    <ButtonUI className="ml-4" type="outlined">Add to wishlist</ButtonUI>
+                                    <ButtonUI className="ml-4" onClick={this.addToCartAlert} type="outlined">Add to wishlist</ButtonUI>
 
                                 </div>
                         }

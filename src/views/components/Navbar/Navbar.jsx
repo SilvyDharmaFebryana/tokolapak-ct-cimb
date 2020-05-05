@@ -102,10 +102,25 @@ class Navbar extends React.Component {
                     Payment
                     </Link>
                   </DropdownItem>
+                  <DropdownItem>
+                    <Link
+                      style={{ color: "inherit", textDecoration: "none" }}
+                      to="/admin/report"
+                    >
+                      Report
+                    </Link>
+                  </DropdownItem>
                 </DropdownMenu>
               ) :
                 <DropdownMenu className="mt-2">
-                  <DropdownItem>Wishlist</DropdownItem>
+                  <DropdownItem>
+                    <Link
+                      style={{ color: "inherit", textDecoration: "none" }}
+                      to="/wishlist"
+                    >
+                      Wishlist
+                    </Link>
+                  </DropdownItem>
                   <DropdownItem>
                     <Link
                       style={{ color: "inherit", textDecoration: "none" }}
@@ -126,19 +141,25 @@ class Navbar extends React.Component {
             className="d-flex flex-row"
             to="/cart"
             style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <FontAwesomeIcon
-              className="mr-2"
-              icon={faShoppingCart}
-              style={{ fontSize: 24 }}
-            />
-            <CircleBg>
-              <small style={{ color: "#3C64B1", fontWeight: "bold" }}>
-                {
-                  this.state.qty
-                }
-              </small>
-            </CircleBg>
+          > 
+          {
+              this.props.user.role === "user" ? (
+                <>
+                <FontAwesomeIcon
+                  className="mr-2"
+                  icon={faShoppingCart}
+                  style={{ fontSize: 24 }}
+                />
+                <CircleBg>
+                  <small style={{ color: "#3C64B1", fontWeight: "bold" }}>
+                    {
+                      this.state.qty
+                    }
+                  </small>
+                </CircleBg>
+                </>
+              ) : null
+          }
           </Link>
           <Link className="ml-4" to="/" style={{ textDecoration: "none", color: "inherit" }} onClick={this.onLogout}><ButtonUI type="contained" >Logout</ButtonUI></Link>
         </>

@@ -18,6 +18,8 @@ import { userKeepLogin, cookieChecker } from "./redux/actions";
 import AdminMember from "./views/screens/Admin/AdminMember/AdminMember";
 import AdminPayment from "./views/screens/Admin/Admin Payment/AdminPayment";
 import History from "./views/screens/History/History";
+import Wishlist from "./views/screens/Wishlist/WishList";
+import AdminReport from "./views/screens/Admin/AdminReport/AdminReport";
 
 
 const cookieObj = new Cookie();
@@ -40,6 +42,14 @@ class App extends React.Component {
       return <Route exact path="/admin/dashboard" component={AdminDashboard} />;
     } else if (this.props.user.role === "user") {
       return <Route path="/admin/dashboard" component={PageNotFound} />
+    } else if (this.props.user.role === "user") {
+      return <Route path="/admin/payment" component={PageNotFound} />
+    } else if (this.props.user.role === "user") {
+      return <Route path="/admin/member" component={PageNotFound} />
+    } else if (this.props.user.role === "user") {
+      return <Route path="/admin/report" component={PageNotFound} />
+    } else {
+      return <Route path="/" component={Home} />
     }
   };
 
@@ -55,7 +65,10 @@ class App extends React.Component {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/admin/member" component={AdminMember} />
             <Route exact path="/admin/payment" component={AdminPayment} />
+            <Route exact path="/admin/report" component={AdminReport} />
+
             <Route exact path="/history" component={History} />
+            <Route exact path="/wishlist" component={Wishlist} />
             {this.renderAdminRoutes()}
             <Route exact path="/product/:productId" component={ProductDetails} />
           </Switch>
