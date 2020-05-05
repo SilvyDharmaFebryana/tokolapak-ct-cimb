@@ -156,6 +156,10 @@ class AdminPayment extends React.Component {
                             <td> {val.subTotals} </td>
                             <td> {val.paymentMethod} </td>
                             <td> <p style={{ color: "#e60000", fontWeight: "500px", textDecoration: "bold" }}>{val.status}</p></td>
+                            <td><ButtonUI className="mt-3" type="textual" id="toggler" style={{ marginBottom: '1rem' }}>
+                                Details
+                                </ButtonUI>
+                            </td>
                         </tr>
                         <tr
                             className={`collapse-item ${
@@ -246,6 +250,10 @@ class AdminPayment extends React.Component {
                             <td> {val.subTotals} </td>
                             <td> {val.paymentMethod} </td>
                             <td><p style={{ color: "#009900", fontWeight: "500px", textDecoration: "bold" }}>{val.status}</p></td>
+                            <td><ButtonUI className="mt-3" type="textual" id="toggler" style={{ marginBottom: '1rem' }}>
+                                Details
+                                </ButtonUI>
+                            </td>
                         </tr>
                         <tr
                             className={`collapse-item ${
@@ -340,6 +348,11 @@ class AdminPayment extends React.Component {
                                     <p style={{ color: "#009900", fontWeight: "500px", textDecoration: "bold" }}>{val.status}</p>
                                 ) : <p style={{ color: "#e60000", fontWeight: "500px", textDecoration: "bold" }}>{val.status}</p>
                             } </td>
+                            <td>
+                                <ButtonUI className="mt-3" type="textual" id="toggler" style={{ marginBottom: '1rem' }}>
+                                    Details
+                                </ButtonUI>
+                            </td>
                         </tr>
                         <tr
                             className={`collapse-item ${
@@ -470,6 +483,7 @@ class AdminPayment extends React.Component {
                                 <th>Total Price</th>
                                 <th>Payment Method</th>
                                 <th>Status</th>
+                                <th></th>
                                 
                             </tr>
                         </thead>
