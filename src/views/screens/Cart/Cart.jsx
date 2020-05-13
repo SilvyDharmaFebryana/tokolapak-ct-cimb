@@ -11,6 +11,7 @@ import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/";
 import { thisExpression } from '@babel/types'
+import { fillCart } from "../../../redux/actions";
 
 class Cart extends React.Component {
 
@@ -87,6 +88,7 @@ class Cart extends React.Component {
         Axios.delete(`${API_URL}/cart/${id}`)
             .then((res) => {
                 this.getDataHandler()
+                this.props.onFillCart(this.props.user.id);
             })
             .catch((err) => {
                 console.log(err);
@@ -177,6 +179,7 @@ class Cart extends React.Component {
                                     })
                             })
                             swal("Transaction Success!", "Your transaction has been processed", "success")
+                            this.props.onFillCart(this.props.user.id);
                         })
                         .catch((err) => {
                             console.log(err);
@@ -362,17 +365,6 @@ class Cart extends React.Component {
                                                             <td>Delivery Fee</td>
                                                             <td>:</td>
                                                             <td>
-                                                                {/* {
-                                                                    this.state.transaction.deliveryCourier === "instant" ? (
-                                                                        <p onChange={() => this.setState({ deliveryFee: 100000 })}>100000</p>
-                                                                    ) : (this.state.transaction.deliveryCourier === "sameday") ? (
-                                                                        <p onChange={() => this.setState({ deliveryFee: 50000 })}>50000</p>
-                                                                    ) : (this.state.transaction.deliveryCourier === "express") ? (
-                                                                        <p onChange={() => this.setState({ deliveryFee: 20000 })}>20000</p>
-                                                                    ) : (this.state.transaction.deliveryCourier === "economy") ? (
-                                                                        <p onChange={() => this.setState({ deliveryFee: 0 })}> 0 </p>
-                                                                    ) : null
-                                                            } */}
                                                             {
                                                                 this.state.transaction.deliveryFee
                                                             }
@@ -459,6 +451,8 @@ const mapStateToProps = (state) => {
         user: state.user,
     }
 }
+const mapDispatchToProps = {
+    onFillCart: fillCart,
+};
 
-
-export default connect(mapStateToProps)(Cart)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

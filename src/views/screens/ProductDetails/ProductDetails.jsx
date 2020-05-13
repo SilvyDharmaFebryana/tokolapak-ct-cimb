@@ -8,6 +8,7 @@ import { API_URL } from "../../../constants/API";
 import swal from 'sweetalert'
 import { throwStatement } from '@babel/types'
 import { Redirect } from "react-router-dom";
+import { fillCart } from "../../../redux/actions";
 
 
 class ProductDetails extends React.Component {
@@ -73,6 +74,7 @@ class ProductDetails extends React.Component {
                     .then((res) => {
                         console.log(res.data);
                         swal("", "Your item has been add to your cart", "success")
+                        this.props.onFillCart(this.props.user.id);
                     })
                     .catch((err) => {
                         console.log(err);
@@ -86,6 +88,7 @@ class ProductDetails extends React.Component {
                 .then((res) => {
                     console.log(res);                  
                     swal("", "Your item has been add to your cart", "success")
+                    this.props.onFillCart(this.props.user.id);
                 })
                 .catch((err) => {
                     console.log(err);
@@ -179,8 +182,12 @@ class ProductDetails extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.user
-    }
-}
+        user: state.user,
+    };
+};
 
-export default connect(mapStateToProps)(ProductDetails)
+const mapDispatchToProps = {
+    onFillCart: fillCart,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);

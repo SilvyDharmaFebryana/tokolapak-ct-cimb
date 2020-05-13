@@ -27,14 +27,14 @@ const cookieObj = new Cookie();
 class App extends React.Component {
   
   componentDidMount() {
-    setTimeout(() => {
+   
       let cookieResult = cookieObj.get("authData", { path: "/" }); //supaya dapet cookie nya sesuai
       if (cookieResult) { //cek apakah ada cookie 
         this.props.keepLogin(cookieResult);
       } else {
         this.props.cookieChecker();
       }
-    }, 1000);
+    
   }
 
   // renderAdminRoutes = () => {

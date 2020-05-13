@@ -11,6 +11,7 @@ const init_state = {
   role: "",
   errMsg: "",
   cookieChecked: false,
+  quantityItem: 0
 };
 
 export default (state = init_state, action) => {
@@ -36,6 +37,8 @@ export default (state = init_state, action) => {
       return { ...init_state, cookieChecked: true };
     case "COOKIE_CHECK":
       return { ...state, cookieChecked: true };
+    case "FILL_CART":
+      return { ...state, quantityItem: action.payload };
     default:
       return { ...state };
   }

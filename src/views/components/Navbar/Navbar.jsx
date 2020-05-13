@@ -152,9 +152,7 @@ class Navbar extends React.Component {
                 />
                 <CircleBg>
                   <small style={{ color: "#3C64B1", fontWeight: "bold" }}>
-                    {
-                      this.state.qty
-                    }
+                      {this.props.user.quantityItem}
                   </small>
                 </CircleBg>
                 </>
@@ -244,7 +242,6 @@ const mapStateToProps = (state) => {
   return {
     user: state.user,
     search: state.search,
-    cart: state.cart,
   }
 }
 
