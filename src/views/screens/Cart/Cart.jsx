@@ -263,7 +263,7 @@ class Cart extends React.Component {
                                 </Table>
 
                                 <div>
-                                    <ButtonUI type="outlined" id="toggler" style={{ marginBottom: '1rem' }}>
+                                <ButtonUI type="outlined" id="toggler" style={{ marginBottom: '1rem' }}>
                                         Checkout
                                 </ButtonUI>
 
